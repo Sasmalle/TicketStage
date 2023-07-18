@@ -1,5 +1,3 @@
-
-
 .form {
     background-color: #fff;
     display: block;
@@ -63,4 +61,11 @@
   
   .signup-link a {
     text-decoration: underline;
+  }
+
+  body { 
+    background-image: url("C:\Users\b22-233-2023\Desktop\Progetto Final Angel\TicketStage\File\FrontScript\img\SfondoLogin.jpg");
+    width: 50%;
+    height: 50%;
+  
   }
