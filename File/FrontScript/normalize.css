@@ -1,0 +1,23 @@
+/* CSS Reset */
+
+/* Imposta il margine e il padding a zero per tutti gli elementi */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Impedisce il bordo su elementi immagine a collegamento */
+  a img {
+    border: none;
+  }
+  
+  /* Ripristina i colori originali del testo per i link */
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  /* Impedisce la visualizzazione di elenchi puntati predefiniti */
+  ul, ol {
+    list-style: none;
+  }
