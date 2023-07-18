@@ -9,36 +9,24 @@
 
 
 
-    <title>Document</title>
+    <title>TicketStage</title>
 </head>
 <body>
-    <header class="logo"> 
-      <!-- Assicurati di fornire il percorso dell'immagine del logo -->
-      <img src="percorso_del_logo.png" alt="logo"> 
-    </header>
-
-    <form class="form">       
-        <div class="input-container">
-          <input type="email" placeholder="Inserisci il tuo codice utente">
-          <span></span>
-        </div>
-        <p class="codDim">        
-          <!-- Inserisci il collegamento per il recupero del codice utente -->
-          <a href="link_per_recupero_codice_utente.html">Recupera codice utente</a>
-        </p>
-    
-        <button type="submit" class="submit">
-          Accedi
-        </button>
-
-        <p class="signup-link">
-          Nessun account?
-          <!-- Inserisci il collegamento per la registrazione -->
-          <a href="link_per_registrazione.html">Registrati</a>
-        </p>
-   </form>
-</body>
-</html>
+    <form class="form">
+      <div class="header">Sign In</div>
+      <div class="inputs">
+          <input placeholder="Codice Utente" class="input" type="text">
+      <div class="checkbox-container">
+          <label class="checkbox">
+          <input type="checkbox" id="checkbox">
+          </label>
+          <label for="checkbox" class="checkbox-text">Ricorda credenziali</label>
+      </div>
+      <button class="sigin-btn">Submit</button>
+      <a class="forget" href="#">Codice utente dimenticato?</a>
+      <p class="signup-link">Non hai un acccount? <a href="#">Registrati</a></p>
+      </div>
+  </form>
 
 
 
