@@ -1,5 +1,8 @@
 package com.ticketstage.entities;
 
+
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
@@ -16,9 +19,16 @@ public class Cliente {
 	private int cod_cliente;
 	
 	
+	@Column(nullable = false, length = 20)
 	private String cognome;
+	
+	@Column(nullable = false, length = 20)
 	private String nome;
-	private int telefono;
+	
+	@Column(nullable = false, length = 14)
+	private String telefono;
+	
+	@Column(nullable = false, length = 30)
 	private String email;
 	
 	public int getCod_cliente() {
@@ -39,10 +49,10 @@ public class Cliente {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public int getTelefono() {
+	public String getTelefono() {
 		return telefono;
 	}
-	public void setTelefono(int telefono) {
+	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 	public String getEmail() {
