@@ -4,37 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/File/FrontScript/normalize.css">
+    <link rel="stylesheet" href="..\normalize.css">
     <link rel="stylesheet" href="style.css">
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <title>TicketStage</title>
 </head>
 <body>
     <form class="form">
-      <div class="header">Sign In</div>
-      <div class="inputs">
-          <input placeholder="Codice Utente" class="input" type="text">
-      <div class="checkbox-container">
-          <label class="checkbox">
-          <input type="checkbox" id="checkbox">
-          </label>
-          <label for="checkbox" class="checkbox-text">Ricorda credenziali</label>
-      </div>
-      <button class="sigin-btn">Submit</button>
-      <a class="forget" href="#">Codice utente dimenticato?</a>
-      <p class="signup-link">Non hai un acccount? <a href="#">Registrati</a></p>
-      </div>
-  </form>
+        <header class="header">TicketStage</header>
+        <div class="inputs">
+            <input id="codiceUtente" class="input" type="text" placeholder="Inserisci il codice utente">
+            <span id="erroreTesto" class="errore-testo"></span>
+            <label for="codiceUtente" class="input-label"><i class="fas fa-user"></i></label>
+        </div>
+        <div class="checkbox-container">
+            <label class="checkbox">
+                <input type="checkbox" id="rememberCheckbox">
+                <span class="checkmark"></span>
+            </label>
+            <label for="rememberCheckbox" class="checkbox-text">Ricorda le credenziali</label>
+        </div>
+        <button id="signinBtn" class="signin-btn">Accedi</button>
+        <a class="forget" href="#">Codice utente dimenticato?</a>
+        <p class="signup-link">Non hai un account? <a href="#">Registrati</a></p>
+    </form>
 
-
-
-
-
-
-
-    <script src=".\script\script.js"></script>
-
+    <script src="script/script.js"></script>
 </body>
 </html>
