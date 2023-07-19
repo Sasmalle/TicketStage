@@ -155,7 +155,8 @@ body {
 /* Media query per dispositivi con larghezza massima di 600px (ad esempio smartphone) */
 @media (max-width: 600px) {
   .form {
-    max-width: 90%; /* Rendi il form meno largo */
+    
+    max-width: 75%; /* Rendi il form meno largo */
   }
 
   .header {
