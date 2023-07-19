@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
   background-color: #f2f2f2;
   display: flex;
   justify-content: center;
@@ -18,10 +18,11 @@ body {
 }
 
 .header {
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
   text-align: center;
+  color: #e41a1c; /* Rosso teatro */
 }
 
 .inputs {
@@ -38,15 +39,14 @@ body {
 }
 
 .errore-testo {
-  display: none;
-  color: red;
+  color: #e41a1c; /* Rosso teatro */
   font-size: 14px;
   position: absolute;
   bottom: -20px;
   left: 0;
 }
 
-.errore-active .errore-testo {
+.error-active .errore-testo {
   display: block;
 }
 
@@ -94,7 +94,7 @@ body {
 }
 
 .checkbox input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #e41a1c; /* Rosso teatro */
 }
 
 .checkmark:after {
@@ -118,7 +118,7 @@ body {
 }
 
 .signin-btn {
-  background-color: #2196F3;
+  background-color: #e41a1c; /* Rosso teatro */
   color: #fff;
   border: none;
   padding: 10px 15px;
@@ -129,13 +129,13 @@ body {
 }
 
 .signin-btn:hover {
-  background-color: #0b7dda;
+  background-color: #b11a1e; /* Rosso teatro più scuro */
 }
 
 .forget {
   display: block;
   text-align: center;
-  color: #2196F3;
+  color: #e41a1c; /* Rosso teatro */
   text-decoration: none;
   margin-top: 5px;
   margin-bottom: 20px;
@@ -146,6 +146,6 @@ body {
 }
 
 .signup-link a {
-  color: #2196F3;
+  color: #e41a1c; /* Rosso teatro */
   text-decoration: none;
 }
