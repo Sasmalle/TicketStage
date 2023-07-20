@@ -1,0 +1,78 @@
+/* Stili generici */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    width: 100%;
+  }
+  
+  .header {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #cc0000; /* Rosso teatro */
+  }
+  
+  .inputs {
+    position: relative;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  
+  .input-label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    font-size: 18px;
+    color: #ccc;
+    cursor: pointer;
+  }
+  
+  .signin-btn {
+    background-color: #cc0000; /* Rosso teatro */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .signin-btn:hover {
+    background-color: #a30000; /* Rosso teatro più scuro */
+  }
+  
+  .signin-link {
+    text-align: center;
+  }
+  
+  .signin-link a {
+    color: #cc0000; /* Rosso teatro */
+    text-decoration: none;
+  }
+  
