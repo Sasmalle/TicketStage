@@ -7,22 +7,19 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.ticketstage.entities.Cliente;
-import com.ticketstage.services.ClienteService;
+import com.ticketstage.entities.Repliche;
+import com.ticketstage.services.ReplicheService;
 
 @RestController
 @RequestMapping("api")
-public class ClienteRest {
+public class ReplicheRest {
 	
 	@Autowired
-	private ClienteService service;
+	private ReplicheService service;
 	
 	@CrossOrigin
-	@GetMapping("cliente")
-	public List<Cliente> getCliente(){
-		return service.getCliente();
+	@GetMapping("repliche")
+	public List<Repliche> getRepliche(){
+		return service.getRepliche();
 	}
-	
-	
 }

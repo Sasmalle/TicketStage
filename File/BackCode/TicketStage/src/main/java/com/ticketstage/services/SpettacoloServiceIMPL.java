@@ -20,16 +20,5 @@ public class SpettacoloServiceIMPL implements SpettacoloService{
 		return dao.findAll();
 	}
 
-	@Override
-	public Spettacolo getSpettacoloById(int cod_spettacolo) {
-		// TODO Auto-generated method stub
-		return dao.getReferenceById(cod_spettacolo);
-	}
-
-	@Override
-	public Spettacolo addSpettacolo(Spettacolo spettacolo) {
-		// TODO Auto-generated method stub
-		return dao.save(spettacolo);
-	}
 
 }

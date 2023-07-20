@@ -2,8 +2,6 @@ package com.ticketstage.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
@@ -17,30 +15,27 @@ public class Spettacolo {
 	
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int cod_spettacolo;
+	private String cod_spettacolo;
 	
-	
-	@Column(nullable = false, length = 20)
+	@Column(length = 80)
 	private String titolo;
 	
-	@Column(nullable = false, length = 20)
+	@Column(length = 25)
 	private String autore;
 	
-	@Column(nullable = false, length = 14)
-	private String registra;
+	@Column(length = 25)
+	private String regista;
 	
-	@Column(nullable = false, length = 30)
 	private double prezzo;
 
 	
 	
 	
-	public int getCod_spettacolo() {
+	public String getCod_spettacolo() {
 		return cod_spettacolo;
 	}
 
-	public void setCod_spettacolo(int cod_spettacolo) {
+	public void setCod_spettacolo(String cod_spettacolo) {
 		this.cod_spettacolo = cod_spettacolo;
 	}
 
@@ -61,11 +56,11 @@ public class Spettacolo {
 	}
 
 	public String getRegistra() {
-		return registra;
+		return regista;
 	}
 
-	public void setRegistra(String registra) {
-		this.registra = registra;
+	public void setRegistra(String regista) {
+		this.regista = regista;
 	}
 
 	public double getPrezzo() {

@@ -2,36 +2,33 @@ package com.ticketstage.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 
 
 @Entity
-@Table(name="spettacoli")
+@Table(name="repliche")
 public class Repliche {
 
 		
 		
 		@Id
-		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private int cod_repliche;
+		private String cod_replica;
 		
+		@Column(nullable = false)
+		private String data_replica;
 		
-		@Column(nullable = false, length = 20)
+		@Column(nullable = false, length = 4)
 		private String cod_spettacolo;
 		
-		@Column(nullable = false, length = 20)
-		private String data_replica;
-
-		public int getCod_repliche() {
-			return cod_repliche;
+		
+		public String getCod_repliche() {
+			return cod_replica;
 		}
 
-		public void setCod_repliche(int cod_repliche) {
-			this.cod_repliche = cod_repliche;
+		public void setCod_repliche(String cod_replica) {
+			this.cod_replica = cod_replica;
 		}
 
 		public String getCod_spettacolo() {

@@ -22,17 +22,6 @@ public class ReplicheServiceIMPL implements ReplicheService{
 		return dao.findAll();
 	}
 
-	@Override
-	public Repliche getReplicheById(int cod_repliche) {
-		// TODO Auto-generated method stub
-		return dao.getReferenceById(cod_repliche);
-	}
-
-	@Override
-	public Repliche addRepliche(Repliche repliche) {
-		// TODO Auto-generated method stub
-		return dao.save(repliche);
-	}
 
 
 }
