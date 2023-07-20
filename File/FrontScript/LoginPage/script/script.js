@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Esegui qui la chiamata API per verificare il codice utente e gestire il login
     const url = "http://localhost:9005/api/";
-    const data = { codiceUtente: codiceUtente };
+    const data = { COD_CLIENTE: codiceUtente };
 
     fetch(url, {
         method: "POST",
