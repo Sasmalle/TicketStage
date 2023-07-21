@@ -21,10 +21,6 @@ public class BigliettoServiceIMPL implements BigliettoService{
 		return dao.findAll();
 	}
 
-	@Override
-	public Biglietto getBigliettoBycode(String code) {
-		// TODO Auto-generated method stub
-		return dao.getReferenceById(code);
-	}
+	
 
 }

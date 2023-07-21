@@ -24,9 +24,11 @@ public class BigliettoRest {
 		return service.getBiglietto();
 	}
 	
-	@GetMapping("biglietto/{code}")
-	public Biglietto getBigliettoBycode(@PathVariable String code) {
-		return service.getBigliettoBycode(code);
-	} 
+//	@GetMapping("biglietto/{id}")
+//	Biglietto BigliettoById(@PathVariable int id) {
+//		return service.getBigliettoByCodeCliente(id);
+//	} 
+//	
+//	
 	
 }

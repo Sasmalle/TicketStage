@@ -12,7 +12,8 @@ public interface BigliettoService {
 	
 	List<Biglietto> getBiglietto();
 	
-	@Query("select * from biglietti where cod_cliente = ?")
-	Biglietto getBigliettoBycode(String code);
+	
+	
+
 	
 }
