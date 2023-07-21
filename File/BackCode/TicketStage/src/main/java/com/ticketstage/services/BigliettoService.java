@@ -12,7 +12,8 @@ public interface BigliettoService {
 	
 	List<Biglietto> getBiglietto();
 	
-	
+
+	List<Biglietto> getBigliettoByCod_cliente(int cod_cliente);
 	
 
 	

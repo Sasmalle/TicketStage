@@ -19,16 +19,16 @@ public class BigliettoRest {
 	@Autowired
 	private BigliettoService service;
 	
-	@GetMapping("biglietto")
+	@GetMapping("biglietti")
 	public List<Biglietto> getBiglietto(){
 		return service.getBiglietto();
 	}
 	
-//	@GetMapping("biglietto/{id}")
-//	Biglietto BigliettoById(@PathVariable int id) {
-//		return service.getBigliettoByCodeCliente(id);
-//	} 
-//	
-//	
+	@GetMapping("biglietti/{cod_cliente}")
+	List<Biglietto> getBigliettiByCodCliente(@PathVariable int cod_cliente) {
+		return service.getBigliettoByCod_cliente(cod_cliente);
+	}
+	
+	
 	
 }

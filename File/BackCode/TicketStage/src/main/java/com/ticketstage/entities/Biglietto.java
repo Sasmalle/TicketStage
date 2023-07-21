@@ -14,28 +14,19 @@ public class Biglietto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int cod_operazione;
-	
-	
-	@Column(nullable = false)
+
 	private int cod_cliente;
-	
-	@Column(nullable = false, length = 4)
 	private String cod_replica;
-	
-	@Column(nullable = false, length = 40)
 	private String data_ora;
-	
-	@Column(nullable = false, length = 20)
 	private String tipo_pagamento;
-	
 	private int quantita;
 
-	public int getCod_opreazione() {
+	public int getCod_operazione() {
 		return cod_operazione;
 	}
 
-	public void setCod_opreazione(int cod_opreazione) {
-		this.cod_operazione = cod_opreazione;
+	public void setCod_operazione(int cod_operazione) {
+		this.cod_operazione = cod_operazione;
 	}
 
 	public int getCod_cliente() {
@@ -77,7 +68,7 @@ public class Biglietto {
 	public void setQuantita(int quantita) {
 		this.quantita = quantita;
 	}
+}// Fine class
 	
 	
-	
-}
+

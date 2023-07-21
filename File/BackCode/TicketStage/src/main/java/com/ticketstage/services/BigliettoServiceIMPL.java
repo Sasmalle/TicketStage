@@ -1,6 +1,7 @@
 package com.ticketstage.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,6 +22,10 @@ public class BigliettoServiceIMPL implements BigliettoService{
 		return dao.findAll();
 	}
 
-	
+	@Override
+    public List<Biglietto> getBigliettoByCod_cliente(int cod_cliente) {
+        return dao.getBigliettoByCodCliente(cod_cliente);
+    }
+
 
 }
