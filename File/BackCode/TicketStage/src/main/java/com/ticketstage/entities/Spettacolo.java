@@ -26,11 +26,29 @@ public class Spettacolo {
 	@Column(length = 25)
 	private String regista;
 	
+	private int cod_teatro;
+	
 	private double prezzo;
 
 	
 	
 	
+	public String getRegista() {
+		return regista;
+	}
+
+	public void setRegista(String regista) {
+		this.regista = regista;
+	}
+
+	public int getCod_teatro() {
+		return cod_teatro;
+	}
+
+	public void setCod_teatro(int cod_teatro) {
+		this.cod_teatro = cod_teatro;
+	}
+
 	public String getCod_spettacolo() {
 		return cod_spettacolo;
 	}
@@ -55,13 +73,6 @@ public class Spettacolo {
 		this.autore = autore;
 	}
 
-	public String getRegistra() {
-		return regista;
-	}
-
-	public void setRegistra(String regista) {
-		this.regista = regista;
-	}
 
 	public double getPrezzo() {
 		return prezzo;

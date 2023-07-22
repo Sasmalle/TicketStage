@@ -27,5 +27,12 @@ public class BigliettoServiceIMPL implements BigliettoService{
         return dao.getBigliettoByCodCliente(cod_cliente);
     }
 
+	@Override
+	public Biglietto addBiglietto(Biglietto b) {
+		// TODO Auto-generated method stub
+		return dao.save(b);
+	}
+	
+	
 
 }

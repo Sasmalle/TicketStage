@@ -15,6 +15,6 @@ public interface BigliettoService {
 
 	List<Biglietto> getBigliettoByCod_cliente(int cod_cliente);
 	
-
+	Biglietto addBiglietto(Biglietto b);
 	
 }

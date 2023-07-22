@@ -23,5 +23,12 @@ public class ReplicheServiceIMPL implements ReplicheService{
 	}
 
 
+	@Override
+	public List<Repliche> getReplicheByCod_spettacolo(String cod_spettacolo) {
+		// TODO Auto-generated method stub
+		return dao.getReplicheByCodRepliche(cod_spettacolo);
+	}
+
+
 
 }
