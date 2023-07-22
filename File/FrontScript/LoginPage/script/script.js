@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
-  const signinBtn = document.getElementById("signinBtn");
-  const codiceUtenteInput = document.getElementById("codiceUtente");
-  const rememberCheckbox = document.getElementById("rememberCheckbox");
-  const erroreTesto = document.getElementById("erroreTesto");
+  const signinBtn = document.querySelector("#signinBtn");
+  const codiceUtenteInput = document.querySelector("#codiceUtente");
+  const rememberCheckbox = document.querySelector("#rememberCheckbox");
+  const erroreTesto = document.querySelector("#erroreTesto");
 
   // Controlla se il codice utente è già stato salvato in precedenza
-  const codiceUtenteSalvato = localStorage.getItem("codiceUtente");
-  if (codiceUtenteSalvato) {
-      codiceUtenteInput.value = codiceUtenteSalvato;
-      rememberCheckbox.checked = true; // Segna automaticamente la casella di controllo "Ricorda credenziali"
-  }
+//   const codiceUtenteSalvato = localStorage.getItem("codiceUtente");
+//   if (codiceUtenteSalvato) {
+//       codiceUtenteInput.value = codiceUtenteSalvato;
+//       rememberCheckbox.checked = true; // Segna automaticamente la casella di controllo "Ricorda credenziali"
+//   }
 
   // Event listener per rimuovere il messaggio di errore quando l'utente inizia a scrivere nel campo del codice utente
   codiceUtenteInput.addEventListener("input", function() {
@@ -32,39 +32,35 @@ document.addEventListener("DOMContentLoaded", function() {
           erroreTesto.classList.remove("error-active");
 
           // Salva il codice utente in localStorage se la casella "Ricorda credenziali" è selezionata
-          if (rememberCheckbox.checked) {
-              localStorage.setItem("codiceUtente", codiceUtente);
-          } else {
-              localStorage.removeItem("codiceUtente");
-          }
+        //   if (rememberCheckbox.checked) {
+        //       localStorage.setItem("codiceUtente", codiceUtente);
+        //   } else {
+        //       localStorage.removeItem("codiceUtente");
+        //   }
 
         // Esegui qui la chiamata API per verificare il codice utente e gestire il login
-    const url = "http://localhost:9005/api/";
-    const data = { COD_CLIENTE: codiceUtente };
+    
+    
 
-    fetch(url, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
+    fetch("http://localhost:9005/api/cliente")
+    .then(data =>{
+        return data.json();
     })
-    .then((response) => response.json())
-    .then((result) => {
-        if (result.valid) {
-            // Codice utente valido, esegui il login
-            // Puoi aggiungere qui il codice per il login e reindirizzare l'utente alla dashboard
-        }   
-        else {
-            // Codice utente non valido, mostra un messaggio di errore
+    .then(clienti => {
+        console.log(clienti);
+        let codiceUtente = codiceUtenteInput.value;
+        console.log(codiceUtente);
+        let CercaCliente = clienti.find(cliente => cliente.cod_cliente == codiceUtente);
+        if(CercaCliente){
+            console.log(CercaCliente)
+            localStorage.clear();
+            localStorage.setItem("utente", JSON.stringify(CercaCliente))
+        }else{
             erroreTesto.textContent = "Codice utente non valido";
             erroreTesto.classList.add("error-active");
         }
-    })
-    .catch((error) => {
-    console.error("Errore durante la chiamata API:", error);
     });
-
+    
         }
     });
 });
