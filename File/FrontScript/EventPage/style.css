@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+}
+
+.top-bar {
+    background-color: #ff6b6b; /* Rosso vivace */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombra sottile */
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase; /* Testo in maiuscolo */
+    letter-spacing: 2px; /* Spaziatura tra le lettere */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 20px; /* Angoli arrotondati */
+    font-size: 14px;
+    background-color: #f9f9f9; /* Colore di sfondo più chiaro */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Ombra sottile */
+}
+
+.search-bar button {
+    margin-left: 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px; /* Angoli arrotondati */
+    background-color: #007bff; /* Blu vivace */
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Effetto di transizione al passaggio del mouse */
+}
+
+.search-bar button:hover {
+    background-color: #0056b3; /* Cambia colore al passaggio del mouse */
+}
+
+.user-actions a {
+    margin-left: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+   
+}
