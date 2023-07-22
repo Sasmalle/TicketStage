@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketStage</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link ai font necessari da Google Fonts (sostituisci con i font desiderati) -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <!-- Link al CSS di Owl Carousel -->
+    <link rel="stylesheet" href="owl.carousel.min.css">
+    <link rel="stylesheet" href="owl.theme.default.min.css">
+
+    <style>/* Aggiungi il CSS dell'header (come visto precedentemente) */
+
+        .section {
+            padding: 20px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .owl-carousel {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .card {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 10px;
+            text-align: center;
+        }
+        
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .card-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .see-all {
+            display: block;
+            text-align: center;
+            color: #cc0000; /* Rosso teatro */
+            text-decoration: none;
+            margin-top: 20px;
+        }
+        
+        /* Aggiungi altre regole CSS e media query come necessario */
+         </style>
+</head>
+<body>
+    <header class="header">
+        <!-- Contenuto dell'header (come visto precedentemente) -->
+    </header>
+
+    <div class="section">
+        <h2 class="section-title">Prossimamente</h2>
+        <div class="owl-carousel">
+            <!-- Card Spettacolo 1 -->
+            <div class="card">
+                <img src="spettacolo1.jpg" alt="Spettacolo 1">
+                <h3 class="card-title">Titolo Spettacolo 1</h3>
+            </div>
+            <!-- Card Spettacolo 2 -->
+            <div class="card">
+                <img src="spettacolo2.jpg" alt="Spettacolo 2">
+                <h3 class="card-title">Titolo Spettacolo 2</h3>
+            </div>
+            <!-- Altre card degli spettacoli -->
+        </div>
+        <a href="#" class="see-all">Vedi tutti gli spettacoli</a>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title">Teatri</h2>
+        <div class="owl-carousel">
+            <!-- Card Teatro 1 -->
+            <div class="card">
+                <img src="teatro1.jpg" alt="Teatro 1">
+                <h3 class="card-title">Nome Teatro 1</h3>
+            </div>
+            <!-- Card Teatro 2 -->
+            <div class="card">
+                <img src="teatro2.jpg" alt="Teatro 2">
+                <h3 class="card-title">Nome Teatro 2</h3>
+            </div>
+            <!-- Altre card dei teatri -->
+        </div>
+        <a href="#" class="see-all">Vedi tutti i teatri</a>
+    </div>
+
+    <script src="script.js"></script>
+    <!-- Script di Owl Carousel -->
+    <script src="owl.carousel.min.js"></script>
+    <script>
+        // Inizializza Owl Carousel
+        $(".owl-carousel").owlCarousel({
+            loop: true,
+            margin: 10,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        });
+    </script>
+</body>
+</html>
