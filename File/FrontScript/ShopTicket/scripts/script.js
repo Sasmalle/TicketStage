@@ -12,6 +12,7 @@ spettacoloSel.innerHTML = `<option value="null" > - </option>`
 replicaSel.innerHTML = `<option value="null" > - </option>`
 
 let CodReplica;
+let dataReplicaSelezionata;
 
 fetch("http://localhost:9005/api/teatro")
   .then(data => {
@@ -22,14 +23,12 @@ fetch("http://localhost:9005/api/teatro")
     teatro.forEach(teatri => {
       teatroSel.innerHTML +=
         `<option value="${teatri.cod_teatro}" id="${teatri.nome}">${teatri.nome}</option>`
-
-
     });
-
+    
   });
 
 teatroSel.addEventListener("change", function () {
-  // Svuota la select delle repliche prima di aggiungere le nuove opzioni
+
   spettacoloSel.innerHTML = `<option value="null" > - </option>`;
 
   fetch(`http://localhost:9005/api/spettacoli/${teatroSel.value}`)
@@ -47,7 +46,7 @@ teatroSel.addEventListener("change", function () {
 
 
 spettacoloSel.addEventListener("change", function () {
-  // Svuota la select delle repliche prima di aggiungere le nuove opzioni
+
   replicaSel.innerHTML = `<option value="null" > - </option>`;
 
   fetch(`http://localhost:9005/api/repliche/${spettacoloSel.value}`)
@@ -58,52 +57,77 @@ spettacoloSel.addEventListener("change", function () {
       console.log(replica);
       replica.forEach(repliche => {
         replicaSel.innerHTML +=
-          `<option value="${repliche.cod_repliche}" id="${repliche.cod_repliche}">${repliche.data_replica}</option>`;
+          `<option value="${repliche.cod_repliche}" id="${repliche.cod_repliche}">${convertiInEuropeo(repliche.data_replica)}</option>`;
 
-        
-      });  
-      
+
+      });
+
     });
-    replicaSel.addEventListener("blur", function(){
-      CodReplica = replicaSel.value;
-      console.log(CodReplica)
-    })
-    
+  replicaSel.addEventListener("blur", function () {
+    CodReplica = replicaSel.value;
+    console.log(CodReplica)
+    dataReplicaSelezionata = convetiInAmericano(replicaSel.options[replicaSel.selectedIndex].text);
+    console.log("Data Replica Selezionata: " + dataReplicaSelezionata);
+  })
+
 })
 
-riduciBiglietti.addEventListener("click", function(){
+riduciBiglietti.addEventListener("click", function () {
   let numeroBiglietti = numBiglietti.value;
-  if ( numeroBiglietti != 0){
+  if (numeroBiglietti != 0) {
     numeroBiglietti--;
-    numBiglietti.value =  numeroBiglietti;
+    numBiglietti.value = numeroBiglietti;
   }
 });
 
-aumentaBiglietti.addEventListener("click", function(){
+aumentaBiglietti.addEventListener("click", function () {
   let numeroBiglietti = numBiglietti.value;
-    numeroBiglietti++;
-    numBiglietti.value =  numeroBiglietti;
+  numeroBiglietti++;
+  numBiglietti.value = numeroBiglietti;
 });
 
 
 
-compra.addEventListener("click", function() {
-  let nuovoBiglietto = {
-        
-    cod_cliente: 1,
-    cod_replica: CodReplica,
-    data_ora: "28/11/1997",
-    tipo_pagamento: pagamento.value,
-    quantita:  numBiglietti.value
+compra.addEventListener("click", function () {
 
+  console.log(CodReplica);
+  console.log(dataReplicaSelezionata);
+  console.log(pagamento.value);
+  console.log(numBiglietti.value);
+
+  if (CodReplica.trim() != "null" && dataReplicaSelezionata.trim() != "null" && pagamento.value.trim() != "null" && numBiglietti.value.trim() != 0) {
+    let nuovoBiglietto = {
+
+      cod_cliente: 1,
+      cod_replica: CodReplica,
+      data_ora: dataReplicaSelezionata,
+      tipo_pagamento: pagamento.value,
+      quantita: numBiglietti.value
+
+    }
+
+
+    fetch('http://localhost:9005/api/biglietti', {
+      method: "POST",
+      headers: { "content-type": "application/json", },
+      body: JSON.stringify(nuovoBiglietto)
+    })
+      .then(data => { return data.json() })
+
+  }
+
+});
+
+
+function convertiInEuropeo(date) {
+  const dateParti = date.split('-');
+  const formatoEuropeo = `${dateParti[2]}/${dateParti[1]}/${dateParti[0]}`;
+  return formatoEuropeo;
 }
 
-
-fetch('http://localhost:9005/api/biglietti',{
-    method: "POST",
-    headers: {"content-type": "application/json",},
-    body: JSON.stringify(nuovoBiglietto)
-})
-.then(data =>{return data.json()})
-
-});
+function convetiInAmericano(date) {
+  const dateParti = date.split('/');
+  // (MM 1 /DD 0/YYYY 2)
+  const formatoAmericano = `${dateParti[2]}-${dateParti[0]}-${dateParti[1]}`;
+  return formatoAmericano;
+}
