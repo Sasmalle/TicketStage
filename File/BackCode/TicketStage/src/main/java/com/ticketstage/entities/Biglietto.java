@@ -16,8 +16,11 @@ public class Biglietto {
 	private int cod_operazione;
 
 	private int cod_cliente;
+	@Column(length = 20)
 	private String cod_replica;
+	@Column(length = 20)
 	private String data_ora;
+	@Column(length = 40)
 	private String tipo_pagamento;
 	private int quantita;
 
@@ -37,6 +40,7 @@ public class Biglietto {
 		this.cod_cliente = cod_cliente;
 	}
 
+	
 	public String getCod_replica() {
 		return cod_replica;
 	}
