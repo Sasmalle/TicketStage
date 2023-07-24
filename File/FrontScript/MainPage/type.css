@@ -2,9 +2,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap');
 
-  @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
 
 
 
@@ -30,7 +30,7 @@ body {
 body {
  
   background-size: cover;
-  background-image: url("/img/SfondoLogin.jpg");
+  background-image: url("/File/FrontScript/img/SfondoLogin.jpg");
   background-position: center;
   background-attachment: fixed;
 }
@@ -44,9 +44,9 @@ body {
 
 }
 
-.form-control {
+.form-control {      /**per modificare la lunghezza della parra cerca**/
   margin-top: 10px;
-  width: 150px;
+  width: 60%;
 }
 
 .nav-link {
@@ -63,7 +63,7 @@ body {
 
 /* Stile quando il cursore è sopra il link */
 .nav-link:hover {
-  background-color: rgba(25, 206, 49, 0.938);
+  background-color: #c22222fd;
   /* Cambia il colore dello sfondo quando il cursore è sopra il link */
 
 }
@@ -73,8 +73,23 @@ body {
 
 }
 
+.d-flex  {
+  width: 70%;  /**per spostare la barra di ricerca**/
+  padding-bottom: 18px;
+  
+}
+
+.d-flex2 {
+  padding-bottom: 22px;
+}
+
+
 /** Stile per l'header e i titoli **/
 
+.carousel-inner img {
+  object-fit: cover; /**per evitare la distorisione delle immagini**/
+  
+}
 
 .testata {
   width: 100%;
@@ -86,7 +101,7 @@ body {
 }
 
 header {
-  background-image: url("/img/opera.jpg");
+  background-image: url("/File/FrontScript/img/opera.jpg");
   background-size: cover;
   background-position: center;
 
@@ -166,15 +181,15 @@ header {
 }
 
 .card:nth-child(1):before {
-  background-image: url("/img/TeatroCarignano.jpg");
+  background-image: url("/File/FrontScript/img/TeatroCarignano.jpg");
 }
 
 .card:nth-child(2):before {
-  background-image: url("/img/TeatroRegio.jpg");
+  background-image: url("/File/FrontScript/img/TeatroRegio.jpg");
 }
 
 .card:nth-child(3):before {
-  background-image: url("/img/TeatroAlfieri.jpg");
+  background-image: url("/File/FrontScript/img/TeatroAlfieri.jpg");
 }
 
 
