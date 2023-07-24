@@ -116,13 +116,14 @@ body {
 }
 
 
-.show-item {
+.show-item {  /**modifiche sfondo dei div biglietti **/
   display: flex;
   align-items: center;
   margin-bottom: 20px;
   border: 1px solid black;
   background-color: rgba(255, 255, 255, 0.5);
   padding: 30px;
+  border-radius: 15px;
 }
 
 .show-image img {
