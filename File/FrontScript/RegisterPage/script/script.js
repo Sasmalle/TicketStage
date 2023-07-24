@@ -40,12 +40,16 @@ document.addEventListener("DOMContentLoaded", function() {
   
       if (telefono === "") {
         mostraErrore(erroreTelefono, "Inserisci il numero di telefono");
+      } else if (!isValidPhoneNumber(telefono)) {
+        mostraErrore(erroreTelefono, "numero di telefono non valido");
       } else {
         nascondiErrore(erroreTelefono);
       }
+    
   
       // Se tutti i campi sono validi, invia i dati all'API per la registrazione
       if (nome !== "" && cognome !== "" && isValidEmail(email) && telefono !== "") {
+        
         const url = "http://localhost:9005/api/registrazione"; // Sostituisci con l'URL dell'API di registrazione
         const data = {
           nome: nome,
@@ -88,6 +92,12 @@ document.addEventListener("DOMContentLoaded", function() {
     function isValidEmail(email) {
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
       return emailPattern.test(email);
+    }
+
+    // Funzione per verificare se una stringa è un numero di telefono valido
+    function isValidPhoneNumber(telefono) {
+      const phoneNumberPattern = /^\d+$/;
+      return phoneNumberPattern.test(telefono);
     }
   });
   
