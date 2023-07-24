@@ -1,5 +1,6 @@
 package com.ticketstage.integration;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.ticketstage.entities.BigliettiReso;
 import com.ticketstage.entities.Biglietto;
 import com.ticketstage.services.BigliettoService;
 
@@ -40,6 +42,12 @@ public class BigliettoRest {
 		return service.addBiglietto(b);
 	}
 	
-	
+	@CrossOrigin
+	@GetMapping("biglietti/test/{cod_cliente}")
+	public List<BigliettiReso> BigliettiByCodCliente(@PathVariable int cod_cliente) {
+		
+
+		return service.getBigliettoByCod_cliente1(cod_cliente);
+	}
 	
 }
