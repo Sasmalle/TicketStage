@@ -31,7 +31,7 @@ body {
 body {
 
   background-size: cover;
-  background-image: url("/img/SfondoLogin.jpg");
+  background-image: url("/File/FrontScript/img/SfondoLogin.jpg");
   background-position: center;
   background-attachment: fixed;
 }
