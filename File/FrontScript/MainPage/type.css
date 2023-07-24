@@ -61,6 +61,23 @@ body {
 
 }
 
+.btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-family: 'Old Standard TT';
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: black;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #0d0d0d;
+}
+
 /* Stile quando il cursore è sopra il link */
 .nav-link:hover {
   background-color: #c22222fd;
@@ -225,22 +242,6 @@ header {
   line-height: 1.35;
 }
 
-.btn {
-  cursor: pointer;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.65rem;
-  font-family: 'Old Standard TT';
-  letter-spacing: 0.025rem;
-  text-transform: uppercase;
-  color: white;
-  background-color: black;
-  border: none;
-}
-
-.btn:hover {
-  background-color: #0d0d0d;
-}
 
 .btn:focus {
   outline: 1px dashed yellow;
