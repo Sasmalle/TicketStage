@@ -11,7 +11,7 @@ import com.ticketstage.entities.Teatro;
 
 public interface TeatroDAO extends JpaRepository<Teatro, Integer> {
 
-	@Query("SELECT s FROM Spettacolo s WHERE s.cod_spettacolo = :codSpettacolo")
-	List<Spettacolo> getSpettacoloByCodSpettacolo(@Param("codSpettacolo") String codSpettacolo);
+	@Query("SELECT t FROM Teatro t WHERE t.cod_teatro = :codTeatro")
+	List<Teatro> getTeatroByCodTeatro(@Param("codTeatro") int codTeatro);
 	
 }
