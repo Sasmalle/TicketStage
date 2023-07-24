@@ -20,5 +20,11 @@ public class TeatroServiceIMPL implements TeatroService {
 	public List<Teatro> getTeatro(){
 		return dao.findAll();
 	}
+
+	@Override
+	public List<Teatro> getTeatroByCodTeatro(int cod_teatro) {
+		// TODO Auto-generated method stub
+		return dao.getTeatroByCodTeatro(cod_teatro);
+	}
 	
 }

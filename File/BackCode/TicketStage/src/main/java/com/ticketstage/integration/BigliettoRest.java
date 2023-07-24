@@ -43,7 +43,7 @@ public class BigliettoRest {
 	}
 	
 	@CrossOrigin
-	@GetMapping("biglietti/test/{cod_cliente}")
+	@GetMapping("biglietti/bigliettoreso/{cod_cliente}")
 	public List<BigliettiReso> BigliettiByCodCliente(@PathVariable int cod_cliente) {
 		
 

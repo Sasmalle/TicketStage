@@ -31,4 +31,12 @@ public class SpettacoloRest {
 	public List<Spettacolo> SpettacoloByCod_spettacolo(@PathVariable int cod_teatro) {
 		return service.getSpettacoloByCod_spettacolo(cod_teatro);
 	}
+	
+	@CrossOrigin
+	@GetMapping("spettacoli/teatro/{cod_spettacoli}")
+	public List<Spettacolo> SpettacoloByCod_getTeatri(@PathVariable String cod_spettacoli) {
+		return service.getSpettacoloByCod_GetTeatro(cod_spettacoli);
+	}
+	
 }
+
