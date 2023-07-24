@@ -14,4 +14,5 @@ public interface ReplicheDAO  extends JpaRepository<Repliche, String>{
 	@Query("SELECT r FROM Repliche r WHERE r.cod_spettacolo = :codReplica")
 	List<Repliche> getReplicheByCodRepliche(@Param("codReplica") String codReplica);
 
+	
 }

@@ -14,4 +14,8 @@ public interface SpettacoloDAO  extends JpaRepository<Spettacolo, String> {
 	@Query("SELECT s FROM Spettacolo s WHERE s.cod_teatro = :codTeatro")
 	List<Spettacolo> getSpettacoloByCodTeatro(@Param("codTeatro") int codTeatro);
 	
+	@Query("SELECT s FROM Spettacolo s WHERE s.cod_spettacolo = :codSpettacolo")
+	List<Spettacolo> getSpettacoloByCodSpettacolo(@Param("codSpettacolo") String codSpettacolo);
+	
+
 }

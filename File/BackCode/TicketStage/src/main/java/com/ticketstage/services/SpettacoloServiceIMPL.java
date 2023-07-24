@@ -30,4 +30,12 @@ public class SpettacoloServiceIMPL implements SpettacoloService{
 	}
 
 
+	@Override
+	public List<Spettacolo> getSpettacoloByCod_GetTeatro(String cod_spettacolo) {
+		// TODO Auto-generated method stub
+		return dao.getSpettacoloByCodSpettacolo(cod_spettacolo);
+	}
+
+
+
 }

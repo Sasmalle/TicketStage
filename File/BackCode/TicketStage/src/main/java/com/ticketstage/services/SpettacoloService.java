@@ -12,4 +12,7 @@ public interface SpettacoloService {
 
 	List<Spettacolo> getSpettacoloByCod_spettacolo(int cod_teatro);
 	
+	List<Spettacolo> getSpettacoloByCod_GetTeatro(String cod_spettacolo);
+
+	
 }
