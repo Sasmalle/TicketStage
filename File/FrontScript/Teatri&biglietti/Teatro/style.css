@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,300;1,400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+
+
+:root {
+  --d: 700ms;
+  --e: cubic-bezier(0.19, 1, 0.22, 1);
+  --font-sans: "Rubik", sans-serif;
+  --font-serif: "Cardo", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/** Stile corpo della pagina **/
+
+html,
+body {
+  height: 100%;
+}
+
+
+body {
+
+  background-size: cover;
+  background-image: url("/img/SfondoLogin.jpg");
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/** stile per la navbar **/
+
+.container-fluid {
+  background-color: rgb(255, 255, 255);
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.container {
+  
+}
+
+.form-control {
+  /**per modificare la lunghezza della barra cerca**/
+  margin-top: 10px;
+  width: 60%;
+}
+
+.nav-link {
+
+  text-decoration: none;
+  background-color: transparent;
+  /* Sfondo trasparente di default */
+  border-radius: 10px;
+  margin-right: 10px;
+  transition: all 0.5s;
+  font-family: 'Old Standard TT';
+
+}
+
+/* Stile quando il cursore è sopra il link */
+.nav-link:hover {
+  background-color: #c22222fd;
+  /* Cambia il colore dello sfondo quando il cursore è sopra il link */
+
+}
+
+.dropdown-item {
+  font-family: 'Old Standard TT';
+
+}
+
+.d-flex {
+  width: 70%;
+  /**per spostare la barra di ricerca**/
+  padding-bottom: 18px;
+
+}
+
+.d-flex2 {
+  padding-bottom: 22px;
+}
+
+
+/* Main Content */
+.main-content {
+  padding: 40px 0; 
+  text-align: center;
+  font-family: 'Old Standard TT';
+  
+
+}
+
+
+.show-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 30px;
+}
+
+.show-image img {
+  max-width: 200px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.show-details h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.show-details {
+  text-align: right;
+}
+
+.btn-buy {
+  padding: 10px 20px;
+  background-color: rgb(199, 36, 36);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  margin-bottom: 10px ;
+}
+
+/**footer**/
+
+
+.icone {
+  margin-left: 8%;
+  mix-blend-mode: color-burn;
+  padding-left: 110px;
+
+
+}
+
+.site-footer {
+  background-color: #26272b;
+  padding: 45px 0 20px;
+  font-size: 15px;
+  line-height: 24px;
+  color: #ffffff;
+  
+  
+  
+
+}
+
+
+.site-footer hr {
+  border-top-color: #bbb;
+  opacity: 0.5;
+}
+
+.site-footer hr.small {
+  margin: 20px 0;
+}
+
+.site-footer h6 {
+  color: #000000;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  letter-spacing: 2px;
+  font-family: 'Old Standard TT';
+}
+
+.site-footer a {
+  color: #f7f2f2;
+}
+
+.site-footer a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.footer-links {
+  padding-left: 0;
+  list-style: none;
+}
+
+.footer-links li {
+  display: block;
+}
+
+.footer-links a {
+  color: #f7f2f2;
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+  color: #3366cc;
+  text-decoration: none;
+}
+
+.footer-links.inline li {
+  display: inline-block;
+}
+
+.site-footer .social-icons {
+  text-align: right;
+}
+
+.site-footer .social-icons a {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 6px;
+  margin-right: 0;
+  border-radius: 100%;
+  background-color: #33353d;
+}
+
+.text-justify {
+  font-family: 'Old Standard TT';
+  font-weight: 400;
+}
+
+.copyright-text {
+  margin: 0;
+}
+
+@media (max-width: 991px) {
+  .site-footer [class^="col-"] {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
+  }
+
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
+    text-align: center;
+  }
+}
+
+.social-icons {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.social-icons li.title {
+  margin-right: 15px;
+  text-transform: uppercase;
+  color: #96a2b2;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.social-icons a {
+  background-color: #eceeef;
+  color: #818a91;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 44px;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  margin-right: 8px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+.social-icons a:active,
+.social-icons a:focus,
+.social-icons a:hover {
+  color: #fff;
+  background-color: #29aafe;
+}
+
+.social-icons.size-sm a {
+  line-height: 34px;
+  height: 34px;
+  width: 34px;
+  font-size: 14px;
+}
+
+.social-icons a.facebook:hover {
+  background-color: #3b5998;
+}
+
+.social-icons a.twitter:hover {
+  background-color: #00aced;
+}
+
+.social-icons a.linkedin:hover {
+  background-color: #007bb6;
+}
+
+.social-icons a.dribbble:hover {
+  background-color: #ea4c89;
+}
+
+@media (max-width: 767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 767px) {
+  .social-icons li.title {
+    display: block;
+    margin-right: 0;
+    font-weight: 600;
+  }
+}
+
+
+@media (min-width: 600px) {
+  .page-content {}
+}
+
+@media (min-width: 800px) {
+  .page-content {}
+}
