@@ -1,88 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:ital,wght@0,300;1,400&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@400;700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
-
-
-
 
 :root {
   --d: 700ms;
   --e: cubic-bezier(0.19, 1, 0.22, 1);
-  --font-sans: "Rubik", sans-serif;
-  --font-serif: "Cardo", serif;
+  --font-sans: "Montserrat", sans-serif;
+  --font-serif: "Old Standard TT", serif;
 }
 
 * {
   box-sizing: border-box;
-}
-
-/** Stile corpo della pagina **/
-
-html,
-body {
-  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
- 
-  background-size: cover;
-  background-image: url("/File/FrontScript/img/SfondoLogin.jpg");
-  background-position: center;
-  background-attachment: fixed;
+  
+  font-family: var(--font-sans);
+  line-height: 1.6;
 }
 
-/** stile per la navbar **/
+/* Navbar */
 
-.container-fluid {
-  background-color: rgb(255, 255, 255);
-  padding-top: 10px;
-  padding-bottom: 10px;
-
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  padding: 2px;
+  z-index: 100;
+  transition: all 0.3s ease-in-out;
 }
 
-.form-control {      /**per modificare la lunghezza della parra cerca**/
-  margin-top: 10px;
-  width: 60%;
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif; /* Cambio il font a "Roboto" */
+  font-size: 1.5rem;
+  color: #cc0000;
+  margin: 0 auto; /* Centra la scritta "TicketStage" */
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
 }
 
 .nav-link {
-
+  font-family: "Roboto", sans-serif; /* Cambio il font a "Roboto" */
   text-decoration: none;
-  background-color: transparent;
-  /* Sfondo trasparente di default */
-  border-radius: 10px;
+  color: #fff;
   margin-right: 10px;
   transition: all 0.5s;
-  font-family: 'Old Standard TT';
-
 }
 
-.btn {
-  cursor: pointer;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.65rem;
-  font-family: 'Old Standard TT';
-  letter-spacing: 0.025rem;
-  text-transform: uppercase;
-  color: white;
-  background-color: black;
-  border: none;
-}
-
-.btn:hover {
-  background-color: #0d0d0d;
-}
-
-/* Stile quando il cursore è sopra il link */
 .nav-link:hover {
-  background-color: #c22222fd;
-  /* Cambia il colore dello sfondo quando il cursore è sopra il link */
+  color: #c22222;
+}
 
+.navbar.shrink {
+  padding: 6px;
 }
 
 .dropdown-item {
