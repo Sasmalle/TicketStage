@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicketStage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+
+  <!-- Navbar -->
+
+
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Logo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#contattaci">Chi siamo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#card1">Teatri</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Spettacoli
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Appunti per un film
+                  sulla lotta di classe</a></li>
+              <li><a class="dropdown-item" href="#">Il birraio di Preston</a></li>
+              <li><a class="dropdown-item" href="#">La Traviata</a></li>
+              <li><a class="dropdown-item" href="#">La Bohème</a></li>
+              <li><a class="dropdown-item" href="#">Poveri, ma belli</a></li>
+              <li><a class="dropdown-item" href="#">Il sogno del piccolo
+                  imperatore</a></li>
+            </ul>
+          </li>
+        </ul>
+        </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-3" type="search" placeholder="Cerca" aria-label="Search">
+          <button class="btn" onmouseover="this.style.color='#fff'; this.style.backgroundColor='#28a745';"
+            onmouseout="this.style.backgroundColor='black';" type="submit">Cerca</button>
+        </form>
+        <form class="d-flex2" role="search">
+          <button class="btn" onmouseover="this.style.color='#fff'; this.style.backgroundColor='#c22222fd';"
+            onmouseout="this.style.backgroundColor='black';" type="submit">Accedi</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Contenuto -->
+  <main class="main-content">
+    <div class="container">
+      <div class="show-item">
+        <div class="show-image">
+          <img src="img/spettacolo1.jpg" alt="Spettacolo 1">
+        </div>
+        <div class="show-details">
+          <h2>Il Birraio di Preston</h2>
+          <p>Regista: Andrea Camilleri</p>
+          <p>Anno: 1995</p>
+          <p>Regia:</p>
+          <p></p>
+          <p></p>
+          <button class="btn-buy">Acquista biglietto</button>
+        </div>
+      </div>
+
+      <!-- Ripetere il blocco show-item per ciascuno spettacolo -->
+      <!-- Esempio per 6 spettacoli -->
+
+
+
+      <!-- Contenuto -->
+      <main class="main-content">
+        <div class="container">
+          <div class="show-item">
+            <div class="show-image">
+              <img src="img/spettacolo4.jpg" alt="Spettacolo 1">
+            </div>
+            <div class="show-details">
+              <h2>Titolo Spettacolo 1</h2>
+              <p>Regista: Nome Regista</p>
+              <p>Anno: 2023</p>
+              <p>Attori: Attore 1, Attore 2, Attore 3</p>
+              <button class="btn-buy">Acquista biglietto</button>
+            </div>
+          </div>        
+
+
+              <!--footer-->
+              
+
+              <footer class="site-footer">
+                <div class="container2">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-8">
+                      <h6>Su di noi</h6>
+                      <p class="text-justify">Amanti del teatro sponsorizziamo i migliori spettacoli per tutta la città
+                        di Torino per divulgare l'arte e la cultura, così che tutti possano assistere alle opere del
+                        passato che hanno segnato la storia. La nostra passione per il teatro si riflette nel servizio
+                        che offriamo ai nostri clienti, in modo da poterti concentrare solo sulla magia dello spettacolo
+                        che stai per vivere. </p>
+                    </div>
+
+                    <!-- <div class="col-xs-6 col-md-3">   altra colonna aggiuntiva nel footer che ho lasciato in caso di bisogno
+        <h6>Categories</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+          <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+          <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+          <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+          <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+          <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+        </ul>
+      </div> -->
+
+                    <div class="col-xs-6 col-md-3">
+                      <h6 id="contattaci">Contattaci</h6>
+                      <ul class="footer-links">
+                        <li><a href="http://scanfcode.com/about/">telefono: 351836750</a></li>
+                        <li><a href="http://scanfcode.com/contact/">mail: TicketStage@virgilio.com</a></li>
+                        <li><a href="http://scanfcode.com/contribute-at-scanfcode/"></a>Donazioni</li>
+                        <li><a href="http://scanfcode.com/privacy-policy/">Privacy Policy</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-8 col-sm-6 col-xs-12">
+                      <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+                        <a href="#">Scanfcode</a>.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6 col-xs-12">
+                      <ul class="social-icons">
+                        <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!--immagini degli sponsor-->
+
+                <img class="icone" alt="partner" textalign=""
+                  src="https://www.teatrostabiletorino.it/wp-content/uploads/2019/02/piede_loghiTST.jpg">
+              </footer>
+
+
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+                crossorigin="anonymous">
+
+                </script>
+
+
+</body>
+
+</html>
