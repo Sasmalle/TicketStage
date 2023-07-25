@@ -54,7 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
         if(CercaCliente){
             console.log(CercaCliente)
             localStorage.clear();
-            localStorage.setItem("utente", JSON.stringify(CercaCliente))
+            localStorage.setItem("utente", JSON.stringify(CercaCliente));
+            window.location.href = "../MainPage/MainPage.html";
         }else{
             erroreTesto.textContent = "Codice utente non valido";
             erroreTesto.classList.add("error-active");
