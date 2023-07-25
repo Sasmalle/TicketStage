@@ -15,70 +15,38 @@ replicaSel.innerHTML = `<option value="null" > - </option>`
 let CodReplica;
 let dataReplicaSelezionata;
 
-function contatore()
+let postiDisponibili = JSON.parse(localStorage.getItem('postiDisponibili'));
 
-
-
-function contatore(){
-  if (!postiDisponibiliCaricati) {
-    postiDisponibili = [
-      875, 875, 875, 875, 875, 875, 875, 875, 875, 875,
-      1592, 1592, 1592, 1592, 1592, 1592, 1592, 1592, 1592, 1592,
-      1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500
-    ];
-  }
-  postiDisponibiliCaricati=true;
+if (!postiDisponibili) {
+  postiDisponibili = [
+    0, 875, 875, 875, 875, 875, 875, 875, 875, 875, 875,
+    1592, 1592, 1592, 1592, 1592, 1592, 1592, 1592, 1592, 1592,
+    1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500
+  ];
 }
-// Aggiungi il codice in cui vuoi eseguire postiDisponibili solo una volta
 
-
-console.log(postiDisponibili)
 const dataOraCorrenti = new Date();
 
-let i=0;
+replicaSel.innerHTML = `<option value="null" > Seleziona data della replica </option>`;
 
-// teatroSel.addEventListener("change", function () {
-
-//   spettacoloSel.innerHTML = `<option value="null" > - </option>`;
-
-//   fetch(`http://localhost:9005/api/spettacoli/${teatroSel.value}`)
-//     .then(data => {
-//       return data.json();
-//     })
-//     .then(spettacolo => {
-//       console.log(spettacolo);
-//       spettacolo.forEach(speccoli => {
-//         spettacoloSel.innerHTML +=
-//           `<option value="${speccoli.cod_spettacolo}" id="${speccoli.titolo}">${speccoli.titolo}</option>`
-//       });
-//     });
-// })
-
-// spettacoloSel.addEventListener("change", function () {
-
-  replicaSel.innerHTML = `<option value="null" > Seleziona data della replica </option>`;
-
-  fetch(`http://localhost:9005/api/repliche/${localStorage.getItem("cod_spettacolo")}`)
-    .then(data => {
-      return data.json();
-    })
-    .then(replica => {
-      console.log(replica);
-      replica.forEach(repliche => {
-        replicaSel.innerHTML +=
-          `<option value="${repliche.cod_repliche}" id="${repliche.cod_repliche}">${convertiInEuropeo(repliche.data_replica)}</option>`;
-      });
-
-    });
-    replicaSel.addEventListener("blur", function () {
-    CodReplica = replicaSel.value;
-    console.log(CodReplica)
-    
-    //dataReplicaSelezionata = convetiInAmericano(replicaSel.options[replicaSel.selectedIndex].text);
-    //console.log("Data Replica Selezionata: " + dataReplicaSelezionata);
+fetch(`http://localhost:9005/api/repliche/${localStorage.getItem("cod_spettacolo")}`)
+  .then(data => {
+    return data.json();
   })
+  .then(replica => {
+    console.log(replica);
+    replica.forEach(repliche => {
+      replicaSel.innerHTML +=
+        `<option value="${repliche.cod_repliche}" id="${repliche.cod_repliche}">${convertiInEuropeo(repliche.data_replica)}</option>`;
+    });
 
-// })
+  });
+
+
+replicaSel.addEventListener("blur", function () {
+  CodReplica = replicaSel.value;
+})
+
 
 riduciBiglietti.addEventListener("click", function () {
   let numeroBiglietti = numBiglietti.value;
@@ -94,47 +62,44 @@ aumentaBiglietti.addEventListener("click", function () {
   numBiglietti.value = numeroBiglietti;
 });
 
-
-
 compra.addEventListener("click", function () {
 
-  
   const utete = localStorage.getItem("utente");
   const codUtente = JSON.parse(utete);
   const dataCorrente = dataOraCorrenti.toLocaleDateString(); // Formato: MM/GG/AAAA
   const oraCorrente = dataOraCorrenti.toLocaleTimeString(); // Formato: hh:mm:ss
-  postiDisponibili[ottieniPosizioneArray(CodReplica)] -=  numBiglietti.value;
-  postiDisponibiliCaricati = true;
-  if ( postiDisponibili[ottieniPosizioneArray(CodReplica)] > 0){
-    
-    if (CodReplica.trim() != "null"  && pagamento.value.trim() != "null" && numBiglietti.value.trim() != 0) {
+  const postiDisponibiliReplica = postiDisponibili[ottieniPosizioneArray(CodReplica)];
+  if (CodReplica.trim() != "null" && pagamento.value.trim() != "null" && numBiglietti.value.trim() != 0) {
+    postiDisponibili[ottieniPosizioneArray(CodReplica)] -= numBiglietti.value;
+    updatePostiDisponibiliInStorage();
+    if (postiDisponibili[ottieniPosizioneArray(CodReplica)] > 0) {
+
       let nuovoBiglietto = {
-  
+
         cod_cliente: codUtente.cod_cliente,
         cod_replica: CodReplica,
         data_ora: convetiInAmericano(dataCorrente) + " " + oraCorrente,
         tipo_pagamento: pagamento.value,
         quantita: numBiglietti.value
-  
+
       }
-  
-  
+
       fetch('http://localhost:9005/api/biglietti', {
         method: "POST",
         headers: { "content-type": "application/json", },
         body: JSON.stringify(nuovoBiglietto)
       })
         .then(data => { return data.json() })
-  
+
+    } else {
+      postiDisponibili[ottieniPosizioneArray(CodReplica)] = postiDisponibiliReplica;
+      updatePostiDisponibiliInStorage()
+      formBiglietto.innerHTML = `<p> posti esauiriti</p>`
     }
-  
-  }else{
-    formBiglietto.innerHTML=`<p> posti esauiriti</p>`
+
   }
 
-  
 });
-
 
 function convertiInEuropeo(date) {
   const dateParti = date.split('-');
@@ -157,4 +122,8 @@ function ottieniPosizioneArray(datoStringa) {
   const posizioneArray = parseInt(numeroStringa, 10);
 
   return posizioneArray;
+}
+
+function updatePostiDisponibiliInStorage() {
+  localStorage.setItem('postiDisponibili', JSON.stringify(postiDisponibili));
 }

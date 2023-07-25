@@ -5,8 +5,6 @@ import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-
-import com.ticketstage.entities.BigliettiReso;
 import com.ticketstage.entities.Biglietto;
 
 public interface BigliettoDAO extends JpaRepository<Biglietto, Integer> {
@@ -23,8 +21,5 @@ public interface BigliettoDAO extends JpaRepository<Biglietto, Integer> {
 		    "WHERE c.COD_CLIENTE = :cod_cliente", nativeQuery = true)
 		List<String[]> getBigliettoByCodCliente1(@Param("cod_cliente") int codCliente);
 	
-	// VERSIONE IMPORTANTE -------------------------------------------------------------
-//	@Query(value = "SELECT b.cod_cliente, r.cod_replica FROM biglietti b " +
-//            "JOIN Repliche r ON b.cod_replica  = r.cod_replica", nativeQuery = true)
-//	List<String[]> getBigliettoByCodCliente1(@Param("codCliente") int codCliente);
+
 }

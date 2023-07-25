@@ -7,10 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const spettacoloPrezzo = document.getElementById("spettacolo-prezzo");
     const teatriAssociati = document.getElementById("teatri-associati");
     let codSpettacolo;
-    // URL dell'API degli spettacoli e dei teatri (sostituisci con i tuoi URL effettivi)
-    const apiURLSpettacoli = "https://example.com/api/spettacoli";
-    const apiURLTeatri = "https://example.com/api/teatri";
-  
+    
     // Funzione per ottenere gli spettacoli dall'API
     function getSpettacoli() {
       fetch("http://localhost:9005/api/spettacoli")
