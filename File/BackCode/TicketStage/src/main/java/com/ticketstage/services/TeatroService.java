@@ -2,7 +2,7 @@ package com.ticketstage.services;
 
 import java.util.List;
 
-import com.ticketstage.entities.Spettacolo;
+
 import com.ticketstage.entities.Teatro;
 
 public interface TeatroService {

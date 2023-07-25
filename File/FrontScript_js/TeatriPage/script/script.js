@@ -10,8 +10,6 @@
     const eventiAssociati = document.getElementById("eventi-associati");
     let idteatro
     // URL dell'API dei teatri e degli eventi (sostituisci con i tuoi URL effettivi)
-    const apiURLTeatri = "http://localhost:9005/api/teatro";
-    const apiURLEventi = `http://localhost:9005/api/spettacoli/${idteatro}`;
     
     // Funzione per ottenere i teatri dall'API
     function getTeatri() {
