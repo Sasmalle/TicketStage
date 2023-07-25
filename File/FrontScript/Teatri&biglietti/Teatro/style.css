@@ -8,14 +8,6 @@
 
 
 
-
-:root {
-  --d: 700ms;
-  --e: cubic-bezier(0.19, 1, 0.22, 1);
-  --font-sans: "Rubik", sans-serif;
-  --font-serif: "Cardo", serif;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -27,11 +19,10 @@ body {
   height: 100%;
 }
 
-
 body {
-
+ 
   background-size: cover;
-  background-image: url("/File/FrontScript/img/SfondoLogin.jpg");
+  background-image: url("img/SfondoLogin.jpg");
   background-position: center;
   background-attachment: fixed;
 }
@@ -41,51 +32,31 @@ body {
 .container-fluid {
   background-color: rgb(255, 255, 255);
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 10px;  
+  margin-bottom: -10px;
+  margin-top: -10px;
 
-}
-
-
-
-.form-control {
-  /**per modificare la lunghezza della barra cerca**/
-  margin-top: 10px;
-  width: 60%;
 }
 
 .nav-link {
-
   text-decoration: none;
   background-color: transparent;
   /* Sfondo trasparente di default */
   border-radius: 10px;
   margin-right: 10px;
   transition: all 0.5s;
-  font-family: 'Old Standard TT';
+  font-family: 'Old Standard TT';  
+  margin-top: 20px;
+  padding: 10px;
+  
 
-}
-
-.btn {
-  cursor: pointer;
-  margin-top: 1.5rem;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.65rem;
-  font-family: 'Old Standard TT';
-  letter-spacing: 0.025rem;
-  text-transform: uppercase;
-  color: white;
-  background-color: black;
-  border: none;
-}
-
-.btn:hover {
-  background-color: #0d0d0d;
 }
 
 /* Stile quando il cursore è sopra il link */
 .nav-link:hover {
-  background-color: #c22222fd;
+  background-color: rgba(209, 59, 32, 0.938);
   /* Cambia il colore dello sfondo quando il cursore è sopra il link */
+  color: #fff !important;
 
 }
 
@@ -94,27 +65,86 @@ body {
 
 }
 
-.d-flex {
-  width: 70%;
-  /**per spostare la barra di ricerca**/
-  padding-bottom: 18px;
+
+/** Stile per l'header e i titoli **/
+
+
+.testata {
+  width: 90%;
+  height: 60%;
+  padding: 30px;
+  padding-bottom: 5%;
+  margin: 0 auto;
 
 }
 
-.d-flex2 {
-  padding-bottom: 22px;
+header {  
+  background-image: url("img/TeatroCarignano.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  border-radius: 15px;
+  
 }
+
+.titolone {
+  font-size: 45px;
+  color: rgb(255, 255, 255);
+  font-family: 'Old Standard TT';
+  font-weight: 700;  
+  text-shadow: 4px 4px 6px black;
+  font-style: italic;
+  font-size: bold;
+
+}
+
+.subtitolo {
+  color: #ffffff;
+  font-family:'Old Standard TT'; 
+  text-shadow: 2px 2px 4px black;
+  text-align:top;
+
+}
+
+.h2{
+  font-size: 45px;
+  color: rgb(255, 255, 255);
+  font-family: 'Old Standard TT';
+  font-weight: 400;  
+  text-shadow: 4px 4px 6px black;
+  font-style: italic;
+  font-size: bold;
+  padding-left: 9%;
+  padding-top: 4%;
+  padding-bottom: 3%;
+
+  
+}
+
+h2 {
+  font-size: 45px;
+  color: rgb(206, 6, 6);
+  font-family: 'Old Standard TT';
+  font-weight: 400;  
+  text-shadow: 4px 4px 6px black;
+  font-style: italic;
+  font-size: bold;
+
+}
+
 
 
 /* Main Content */
-.main-content {
-  padding: 40px 0; 
-  text-align: center;
-  font-family: 'Old Standard TT';
-  
 
+.pos {
+ margin: 0 auto;
+ height: 50px;
+ background-image: cover;
 }
 
+.info {
+  text-align: right;
+}
 
 .show-item {  /**modifiche sfondo dei div biglietti **/
   display: flex;
@@ -124,6 +154,7 @@ body {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 30px;
   border-radius: 15px;
+  
 }
 
 .show-image img {
@@ -134,46 +165,39 @@ body {
 
 .show-details h2 {
   font-size: 24px;
-  margin-bottom: 10px;
-}
 
-.show-details {
-  text-align: right;
+  
 }
 
 .btn-buy {
   padding: 10px 20px;
   background-color: rgb(199, 36, 36);
   color: #fff;
-  border: none;
   cursor: pointer;
   border-radius: 10px;
-  margin-bottom: 10px ;
 }
 
 /**footer**/
 
 
+.footer {
+  border-top: 1px solid rgb(214, 207, 207);
+  margin: 3% 15% 0px 15%;  
+}
+
 .icone {
-  margin-left: 8%;
-  mix-blend-mode: color-burn;
+  margin-left: 8%;  
   padding-left: 110px;
-
-
 }
 
 .site-footer {
-  background-color: #26272b;
+  background-color: #ffffff;
   padding: 45px 0 20px;
   font-size: 15px;
   line-height: 24px;
-  color: #ffffff;
-  
-  
-  
+  color: #000000;
 
 }
-
 
 .site-footer hr {
   border-top-color: #bbb;
@@ -194,7 +218,7 @@ body {
 }
 
 .site-footer a {
-  color: #f7f2f2;
+  color: #000000;
 }
 
 .site-footer a:hover {
@@ -212,7 +236,7 @@ body {
 }
 
 .footer-links a {
-  color: #f7f2f2;
+  color: #000000;
 }
 
 .footer-links a:active,
@@ -231,8 +255,7 @@ body {
 }
 
 .site-footer .social-icons a {
-  width: 40px;
-  height: 40px;
+  width: 40px; 
   line-height: 40px;
   margin-left: 6px;
   margin-right: 0;
@@ -247,6 +270,10 @@ body {
 
 .copyright-text {
   margin: 0;
+}
+
+.row {
+  padding-left: 15%;
 }
 
 @media (max-width: 991px) {
@@ -304,7 +331,7 @@ body {
 .social-icons a:active,
 .social-icons a:focus,
 .social-icons a:hover {
-  color: #fff;
+  color: rgb(0, 0, 0);
   background-color: #29aafe;
 }
 
@@ -339,11 +366,6 @@ body {
   }
 }
 
-
-
-
-
-
 @media (max-width: 767px) {
   .social-icons li.title {
     display: block;
@@ -353,10 +375,15 @@ body {
 }
 
 
-@media (min-width: 600px) {
-  .page-content {}
+@media (max-width: 600px) {
+  .icone {
+    display: none;
+  }
 }
 
-@media (min-width: 800px) {
-  .page-content {}
+@media (min-width: 767px) {
+  .icone {
+    display: none;
+  }
 }
+

@@ -27,8 +27,7 @@ body {
   height: 100%;
 }
 
-body {
- 
+body { 
   background-size: cover;
   background-image: url("img/SfondoLogin.jpg");
   background-position: center;
@@ -308,19 +307,12 @@ header {
 .footer {
  
   border-top: 1px solid rgb(214, 207, 207);
-  margin: 3% 15% 0px 15%;
-  
-
-
-
-  
+  margin: 3% 15% 0px 15%;  
 }
 
 .icone {
   margin-left: 8%;  
   padding-left: 110px;
-
-
 }
 
 .site-footer {
@@ -495,11 +487,6 @@ header {
   }
 }
 
-
-
-
-
-
 @media (max-width: 767px) {
   .social-icons li.title {
     display: block;
@@ -509,11 +496,15 @@ header {
 }
 
 
-@media (min-width: 600px) {
-  .page-content {}
+@media (max-width: 600px) {
+  .icone {
+    display: none;
+  }
 }
 
-@media (min-width: 800px) {
-  .page-content {}
+@media (min-width: 767px) {
+  .icone {
+    display: none;
+  }
 }
 
