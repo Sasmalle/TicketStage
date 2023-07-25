@@ -30,7 +30,7 @@ body {
 body {
  
   background-size: cover;
-  background-image: url("/img/SfondoLogin.jpg");
+  background-image: url("img/SfondoLogin.jpg");
   background-position: center;
   background-attachment: fixed;
 }
@@ -46,11 +46,6 @@ body {
 
 }
 
-.form-control {
-  margin-top: 10px;
-  width: 150px;
-}
-
 .nav-link {
   text-decoration: none;
   background-color: transparent;
@@ -59,6 +54,9 @@ body {
   margin-right: 10px;
   transition: all 0.5s;
   font-family: 'Old Standard TT';  
+  margin-top: 20px;
+  padding: 10px;
+  
 
 }
 
@@ -66,6 +64,7 @@ body {
 .nav-link:hover {
   background-color: rgba(209, 59, 32, 0.938);
   /* Cambia il colore dello sfondo quando il cursore è sopra il link */
+  color: #fff !important;
 
 }
 
@@ -74,10 +73,19 @@ body {
 
 }
 
-.carousel-item img { /** per non distocere le foto**/
+.carousel-item img { /** per non distorcere le foto**/
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+/** codici per fare in modo che il carrosello abbia la stessa dimensione nonstante la dim delle foto diverse**/
+#carouselExampleFade{
+  height: 90vh;
+}
+.carousel-inner img{
+object-fit: cover;
+height: 90vh;
 }
 
 
@@ -99,18 +107,18 @@ body {
 }
 
 header {  
-  background-color: rgba(187, 174, 174, 0.623);  
+  background-color: rgba(187, 174, 174, 0.623); 
   
-
 }
 
 .titolone {
   font-size: 65px;
-  color: rgb(216, 55, 55);
-  font-family: 'mont serrant';
-  font-weight: 400;  
+  color: rgb(255, 255, 255);
+  font-family: 'Old Standard TT';
+  font-weight: 700;  
   text-align: center;
-  text-shadow: 2px 2px 4px black;
+  text-shadow: 4px 4px 6px black;
+  font-style: italic;
 
 }
 
@@ -131,6 +139,7 @@ header {
   max-width: 750px;
   margin: 0 auto;
   font-family: var(--font-sans);
+  
 
 }
 
@@ -139,7 +148,7 @@ header {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  padding: 1rem;
+  padding: 4rem 12rem 4rem 12rem;   /**per modificare l'altezza delle cards**/
   width: 100%;
   text-align: center;
   color: whitesmoke;
@@ -182,15 +191,15 @@ header {
 }
 
 .card:nth-child(1):before {
-  background-image: url("/img/TeatroCarignano.jpg");
+  background-image: url("img/TeatroCarignano.jpg");
 }
 
 .card:nth-child(2):before {
-  background-image: url("/img/TeatroRegio.jpg");
+  background-image: url("img/TeatroRegio.jpg");
 }
 
 .card:nth-child(3):before {
-  background-image: url("/img/TeatroAlfieri.jpg");
+  background-image: url("img/TeatroAlfieri.jpg");
 }
 
 
@@ -203,6 +212,7 @@ header {
   padding: 1rem;
   transition: transform var(--d) var(--e);
   z-index: 1;
+  
 }
 
 .content>*+* {
@@ -295,6 +305,16 @@ header {
 
 /** stile per il footer **/
 
+.footer {
+ 
+  border-top: 1px solid rgb(214, 207, 207);
+  margin: 3% 15% 0px 15%;
+  
+
+
+
+  
+}
 
 .icone {
   margin-left: 8%;  
@@ -496,5 +516,4 @@ header {
 @media (min-width: 800px) {
   .page-content {}
 }
-
 
