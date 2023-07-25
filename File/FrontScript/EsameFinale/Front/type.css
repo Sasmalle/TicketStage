@@ -30,7 +30,7 @@ body {
 body {
  
   background-size: cover;
-  background-image: url("/img/SfondoLogin.jpg");
+  background-image: url("img/SfondoLogin.jpg");
   background-position: center;
   background-attachment: fixed;
 }
@@ -78,6 +78,15 @@ body {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+/** codici per fare in modo che il carrosello abbia la stessa dimensione nonstante la dim delle foto diverse**/
+#carouselExampleFade{
+  height: 90vh;
+}
+.carousel-inner img{
+object-fit: cover;
+height: 90vh;
 }
 
 
@@ -182,15 +191,15 @@ header {
 }
 
 .card:nth-child(1):before {
-  background-image: url("/img/TeatroCarignano.jpg");
+  background-image: url("img/TeatroCarignano.jpg");
 }
 
 .card:nth-child(2):before {
-  background-image: url("/img/TeatroRegio.jpg");
+  background-image: url("img/TeatroRegio.jpg");
 }
 
 .card:nth-child(3):before {
-  background-image: url("/img/TeatroAlfieri.jpg");
+  background-image: url("img/TeatroAlfieri.jpg");
 }
 
 
@@ -295,6 +304,16 @@ header {
 
 /** stile per il footer **/
 
+.footer {
+ 
+  border-top: 1px solid rgb(214, 207, 207);
+  margin: 3% 15% 0px 15%;
+  
+
+
+
+  
+}
 
 .icone {
   margin-left: 8%;  
@@ -496,5 +515,4 @@ header {
 @media (min-width: 800px) {
   .page-content {}
 }
-
 
