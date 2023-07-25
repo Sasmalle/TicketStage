@@ -13,6 +13,7 @@ replicaSel.innerHTML = `<option value="null" > - </option>`
 
 let CodReplica;
 let dataReplicaSelezionata;
+const dataAttuale = new Date();
 
 fetch("http://localhost:9005/api/teatro")
   .then(data => {
@@ -66,8 +67,8 @@ spettacoloSel.addEventListener("change", function () {
   replicaSel.addEventListener("blur", function () {
     CodReplica = replicaSel.value;
     console.log(CodReplica)
-    dataReplicaSelezionata = convetiInAmericano(replicaSel.options[replicaSel.selectedIndex].text);
-    console.log("Data Replica Selezionata: " + dataReplicaSelezionata);
+    //dataReplicaSelezionata = convetiInAmericano(replicaSel.options[replicaSel.selectedIndex].text);
+    //console.log("Data Replica Selezionata: " + dataReplicaSelezionata);
   })
 
 })
@@ -95,12 +96,12 @@ compra.addEventListener("click", function () {
   console.log(pagamento.value);
   console.log(numBiglietti.value);
 
-  if (CodReplica.trim() != "null" && dataReplicaSelezionata.trim() != "null" && pagamento.value.trim() != "null" && numBiglietti.value.trim() != 0) {
+  if (CodReplica.trim() != "null"  && pagamento.value.trim() != "null" && numBiglietti.value.trim() != 0) {
     let nuovoBiglietto = {
 
       cod_cliente: 1,
       cod_replica: CodReplica,
-      data_ora: dataReplicaSelezionata,
+      data_ora: dataAttuale.getTime(),
       tipo_pagamento: pagamento.value,
       quantita: numBiglietti.value
 
