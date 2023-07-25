@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../normalize.css">
+</head>
+<body>
+    <form id="formBiglietto"  >
+
+        <select id="teatro" ></select>
+        <select id="spettacolo"></select>
+        <select id="replica"></select>
+        <select id="pagamento">
+            <option value="null"> - Inserisci metodo di pagamento - </option>
+            <option value="Contanti">Contanti</option>
+            <option value="Carta di credito" >Carta di credito</option>
+        </select>
+        <button type="button" id="riduciB"> - </button>
+        <input type="text" id="numBiglietti" value="0" disabled="true">
+        <button type="button" id="aumentaB"> + </button>
+        <input type="submit" id="CompraBiglietto" value="compra biglietto" >
+
+    </form>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

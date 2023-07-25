@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- font Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Registrati - TicketStage</title>
+</head>
+<body>
+    <form class="form">
+        <header class="header">Registrazione</header>
+        <div class="inputs">
+            <input id="nome" class="input" type="text" placeholder="Nome">
+            <span id="erroreNome" class="errore-testo"></span>
+            <label for="nome" class="input-label"><i class="fas fa-user"></i></label>
+        </div>
+        <div class="inputs">
+            <input id="cognome" class="input" type="text" placeholder="Cognome">
+            <span id="erroreCognome" class="errore-testo"></span>
+            <label for="cognome" class="input-label"><i class="fas fa-user"></i></label>
+        </div>
+        <div class="inputs">
+            <input id="email" class="input" type="email" placeholder="Email">
+            <span id="erroreEmail" class="errore-testo"></span>
+            <label for="email" class="input-label"><i class="fas fa-envelope"></i></label>
+        </div>
+        <div class="inputs">
+            <input id="telefono" class="input" type="text" placeholder="Numero di telefono">
+            <span id="erroreTelefono" class="errore-testo"></span>
+            <label for="telefono" class="input-label"><i class="fas fa-phone"></i></label>
+        </div>
+        <button id="signupBtn" class="signin-btn">Registrati</button>
+        <p class="signin-link">Hai già un account? <a class="login" href="../LoginPage/login.html">Accedi</a></p>
+    </form>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

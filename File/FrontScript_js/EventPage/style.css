@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+}
+
+.navbar {
+    background-color: #fff;
+  }
+  
+  .navbar-brand {
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    color: #cc0000;
+  }
+  
+  .navbar-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #000;
+    margin: 0 10px;
+    transition: color 0.3s;
+  }
+  
+  .nav-link:hover {
+    color: #c22222;
+  }
