@@ -107,9 +107,8 @@ height: 90vh;
 }
 
 header {  
-  background-color: rgba(187, 174, 174, 0.623);  
+  background-color: rgba(187, 174, 174, 0.623); 
   
-
 }
 
 .titolone {
@@ -140,6 +139,7 @@ header {
   max-width: 750px;
   margin: 0 auto;
   font-family: var(--font-sans);
+  
 
 }
 
@@ -148,7 +148,7 @@ header {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
-  padding: 1rem;
+  padding: 4rem 12rem 4rem 12rem;   /**per modificare l'altezza delle cards**/
   width: 100%;
   text-align: center;
   color: whitesmoke;
@@ -212,6 +212,7 @@ header {
   padding: 1rem;
   transition: transform var(--d) var(--e);
   z-index: 1;
+  
 }
 
 .content>*+* {
