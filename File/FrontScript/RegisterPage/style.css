@@ -6,10 +6,14 @@ body {
   align-items: center;
   height: 100vh;
   margin: 0;
+  background-image: url("/File/FrontScript/EsameFinale/Front/img/SfondoLogin.jpg");
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .form {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.774);
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
