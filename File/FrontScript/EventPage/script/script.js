@@ -6,20 +6,20 @@ document.addEventListener("DOMContentLoaded", function() {
     const spettacoloRegista = document.getElementById("spettacolo-regista");
     const spettacoloPrezzo = document.getElementById("spettacolo-prezzo");
     const teatriAssociati = document.getElementById("teatri-associati");
-  
+    let codSpettacolo;
     // URL dell'API degli spettacoli e dei teatri (sostituisci con i tuoi URL effettivi)
     const apiURLSpettacoli = "https://example.com/api/spettacoli";
     const apiURLTeatri = "https://example.com/api/teatri";
   
     // Funzione per ottenere gli spettacoli dall'API
     function getSpettacoli() {
-      fetch(apiURLSpettacoli)
+      fetch("http://localhost:9005/api/spettacoli")
         .then(response => response.json())
         .then(spettacoli => {
           // Aggiungi gli spettacoli alla lista
           spettacoli.forEach(spettacolo => {
             const spettacoloItem = document.createElement("li");
-            spettacoloItem.textContent = spettacolo.nome;
+            spettacoloItem.textContent = spettacolo.titolo;
             spettacoloItem.addEventListener("click", () => showSpettacoloInfo(spettacolo));
             spettacoliList.appendChild(spettacoloItem);
           });
@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
     // Funzione per mostrare le informazioni dello spettacolo selezionato
     function showSpettacoloInfo(spettacolo) {
+      codSpettacolo = spettacolo.cod_teatro;
       spettacoloNome.textContent = spettacolo.nome;
       spettacoloAutore.textContent = "Autore: " + spettacolo.autore;
       spettacoloRegista.textContent = "Regista: " + spettacolo.regista;
@@ -36,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function() {
       spettacoloInfo.style.display = "block";
   
       // Effettua una richiesta API per ottenere i teatri associati allo spettacolo
-      fetch(`${apiURLTeatri}?codiceTeatro=${spettacolo.codiceTeatro}`)
+      fetch(`http://localhost:9005/api/teatro/${codSpettacolo}`)
         .then(response => response.json())
         .then(teatri => {
           // Mostra i teatri associati nello spettacolo
