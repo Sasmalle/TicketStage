@@ -28,7 +28,7 @@ public class Cliente {
 	@Column(nullable = false, length = 14)
 	private String telefono;
 	
-	@Column(nullable = false, length = 30)
+	@Column(nullable = false, length = 200)
 	private String email;
 	
 	public int getCod_cliente() {

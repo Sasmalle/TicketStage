@@ -50,25 +50,27 @@ document.addEventListener("DOMContentLoaded", function() {
       // Se tutti i campi sono validi, invia i dati all'API per la registrazione
       if (nome !== "" && cognome !== "" && isValidEmail(email) && telefono !== "") {
         
-        const url = "http://localhost:9005/api/registrazione"; // Sostituisci con l'URL dell'API di registrazione
-        const data = {
-          nome: nome,
-          cognome: cognome,
-          email: email,
-          telefono: telefono,
-        };
-  
-        fetch(url, {
-        })
-          .then((response) => response.json())
-          .then((result) => {
-            // Gestisci la risposta dell'API qui (ad esempio, mostra un messaggio di successo)
-            console.log(result);
+        
+          let nuovoCliente = {
+      
+            
+            cognome: cognome,
+            nome: nome,
+            telefono: telefono,
+            email: email
+      
+          }
+      
+      
+          fetch('http://localhost:9005/api/cliente', {
+            method: "POST",
+            headers: { "content-type": "application/json", },
+            body: JSON.stringify(nuovoCliente )
           })
-          .catch((error) => {
-            console.error("Errore durante la chiamata API:", error);
-          });
-      }
+            .then(data => { return data.json() })
+      
+        }
+      
     });
   
     // Funzione per mostrare un messaggio di errore sotto l'input
