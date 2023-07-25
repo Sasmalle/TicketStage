@@ -46,11 +46,6 @@ body {
 
 }
 
-.form-control {
-  margin-top: 10px;
-  width: 150px;
-}
-
 .nav-link {
   text-decoration: none;
   background-color: transparent;
@@ -59,6 +54,9 @@ body {
   margin-right: 10px;
   transition: all 0.5s;
   font-family: 'Old Standard TT';  
+  margin-top: 20px;
+  padding: 10px;
+  
 
 }
 
@@ -66,6 +64,7 @@ body {
 .nav-link:hover {
   background-color: rgba(209, 59, 32, 0.938);
   /* Cambia il colore dello sfondo quando il cursore è sopra il link */
+  color: #fff !important;
 
 }
 
@@ -115,11 +114,12 @@ header {
 
 .titolone {
   font-size: 65px;
-  color: rgb(216, 55, 55);
-  font-family: 'mont serrant';
-  font-weight: 400;  
+  color: rgb(255, 255, 255);
+  font-family: 'Old Standard TT';
+  font-weight: 700;  
   text-align: center;
-  text-shadow: 2px 2px 4px black;
+  text-shadow: 4px 4px 6px black;
+  font-style: italic;
 
 }
 
