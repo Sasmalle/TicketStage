@@ -6,6 +6,7 @@ let riduciBiglietti = document.querySelector("#riduciB");
 let aumentaBiglietti = document.querySelector("#aumentaB");
 let pagamento = document.querySelector("#pagamento");
 let compra = document.querySelector("#CompraBiglietto");
+let formBiglietto = document.querySelector("#formBiglietto")
 
 teatroSel.innerHTML = `<option value="null" >-Seleziona un teatro-</option>`
 spettacoloSel.innerHTML = `<option value="null" > - </option>`
@@ -13,20 +14,28 @@ replicaSel.innerHTML = `<option value="null" > - </option>`
 
 let CodReplica;
 let dataReplicaSelezionata;
+
+function contatore()
+
+
+
+function contatore(){
+  if (!postiDisponibiliCaricati) {
+    postiDisponibili = [
+      875, 875, 875, 875, 875, 875, 875, 875, 875, 875,
+      1592, 1592, 1592, 1592, 1592, 1592, 1592, 1592, 1592, 1592,
+      1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500, 1500
+    ];
+  }
+  postiDisponibiliCaricati=true;
+}
+// Aggiungi il codice in cui vuoi eseguire postiDisponibili solo una volta
+
+
+console.log(postiDisponibili)
 const dataOraCorrenti = new Date();
 
-// fetch("http://localhost:9005/api/teatro")
-//   .then(data => {
-//     return data.json();
-//   })
-//   .then(teatro => {
-//     console.log(teatro);
-//     teatro.forEach(teatri => {
-//       teatroSel.innerHTML +=
-//         `<option value="${teatri.cod_teatro}" id="${teatri.nome}">${teatri.nome}</option>`
-//     });
-    
-//   });
+let i=0;
 
 // teatroSel.addEventListener("change", function () {
 
@@ -44,7 +53,6 @@ const dataOraCorrenti = new Date();
 //       });
 //     });
 // })
-
 
 // spettacoloSel.addEventListener("change", function () {
 
@@ -65,6 +73,7 @@ const dataOraCorrenti = new Date();
     replicaSel.addEventListener("blur", function () {
     CodReplica = replicaSel.value;
     console.log(CodReplica)
+    
     //dataReplicaSelezionata = convetiInAmericano(replicaSel.options[replicaSel.selectedIndex].text);
     //console.log("Data Replica Selezionata: " + dataReplicaSelezionata);
   })
@@ -89,42 +98,41 @@ aumentaBiglietti.addEventListener("click", function () {
 
 compra.addEventListener("click", function () {
 
-  console.log(CodReplica);
-  console.log(dataReplicaSelezionata);
-  console.log(pagamento.value);
-  console.log(numBiglietti.value);
-  // Recuperiamo la stringa JSON dall'oggetto dal Local Storage usando la chiave
+  
   const utete = localStorage.getItem("utente");
-
-// Convertiamo la stringa JSON in un oggetto JavaScript
   const codUtente = JSON.parse(utete);
-
   const dataCorrente = dataOraCorrenti.toLocaleDateString(); // Formato: MM/GG/AAAA
-  
-  
-  // Ottenere l'ora corrente
   const oraCorrente = dataOraCorrenti.toLocaleTimeString(); // Formato: hh:mm:ss
-  if (CodReplica.trim() != "null"  && pagamento.value.trim() != "null" && numBiglietti.value.trim() != 0) {
-    let nuovoBiglietto = {
-
-      cod_cliente: codUtente.cod_cliente,
-      cod_replica: CodReplica,
-      data_ora: convetiInAmericano(dataCorrente) + " " + oraCorrente,
-      tipo_pagamento: pagamento.value,
-      quantita: numBiglietti.value
-
+  postiDisponibili[ottieniPosizioneArray(CodReplica)] -=  numBiglietti.value;
+  postiDisponibiliCaricati = true;
+  if ( postiDisponibili[ottieniPosizioneArray(CodReplica)] > 0){
+    
+    if (CodReplica.trim() != "null"  && pagamento.value.trim() != "null" && numBiglietti.value.trim() != 0) {
+      let nuovoBiglietto = {
+  
+        cod_cliente: codUtente.cod_cliente,
+        cod_replica: CodReplica,
+        data_ora: convetiInAmericano(dataCorrente) + " " + oraCorrente,
+        tipo_pagamento: pagamento.value,
+        quantita: numBiglietti.value
+  
+      }
+  
+  
+      fetch('http://localhost:9005/api/biglietti', {
+        method: "POST",
+        headers: { "content-type": "application/json", },
+        body: JSON.stringify(nuovoBiglietto)
+      })
+        .then(data => { return data.json() })
+  
     }
-
-
-    fetch('http://localhost:9005/api/biglietti', {
-      method: "POST",
-      headers: { "content-type": "application/json", },
-      body: JSON.stringify(nuovoBiglietto)
-    })
-      .then(data => { return data.json() })
-
+  
+  }else{
+    formBiglietto.innerHTML=`<p> posti esauiriti</p>`
   }
 
+  
 });
 
 
@@ -139,4 +147,14 @@ function convetiInAmericano(date) {
   // (MM 1 /DD 0/YYYY 2)
   const formatoAmericano = `${dateParti[2]}-${dateParti[0]}-${dateParti[1]}`;
   return formatoAmericano;
+}
+
+function ottieniPosizioneArray(datoStringa) {
+  // Rimuovi la "s" dalla stringa utilizzando il metodo slice()
+  const numeroStringa = datoStringa.slice(1);
+
+  // Converti la stringa in un numero intero utilizzando parseInt() specificando la base 10
+  const posizioneArray = parseInt(numeroStringa, 10);
+
+  return posizioneArray;
 }
