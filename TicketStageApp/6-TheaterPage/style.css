@@ -71,7 +71,7 @@ body {
 
 .testata {
   width: 90%;
-  height: 60%;
+  height: 30%;
   padding: 30px;
   padding-bottom: 5%;
   margin: 0 auto;
@@ -88,7 +88,7 @@ header {
 }
 
 .titolone {
-  font-size: 45px;
+  font-size: 65px;
   color: rgb(255, 255, 255);
   font-family: 'Old Standard TT';
   font-weight: 700;  
@@ -114,22 +114,30 @@ header {
   text-shadow: 4px 4px 6px black;
   font-style: italic;
   font-size: bold;
-  padding-left: 9%;
+
   padding-top: 4%;
   padding-bottom: 3%;
+  text-align: center;
 
   
 }
 
-h2 {
-  font-size: 45px;
+.titolo {  
   color: rgb(206, 6, 6);
   font-family: 'Old Standard TT';
   font-weight: 400;  
   text-shadow: 4px 4px 6px black;
   font-style: italic;
-  font-size: bold;
+  font-size: 45px;
+  width: 20px;  
 
+}
+
+.p2 {  
+  padding-left: 5%;
+  font-family: 'Old Standard TT';
+  font-style: italic;
+  font-size: 25px;
 }
 
 
@@ -163,18 +171,15 @@ h2 {
   margin-right: 20px;
 }
 
-.show-details h2 {
-  font-size: 24px;
-
-  
-}
 
 .btn-buy {
   padding: 10px 20px;
   background-color: rgb(199, 36, 36);
   color: #fff;
   cursor: pointer;
-  border-radius: 10px;
+  border-radius: 10px;  
+  
+
 }
 
 /**footer**/
@@ -265,7 +270,7 @@ h2 {
 
 .text-justify {
   font-family: 'Old Standard TT';
-  font-weight: 400;
+  font-weight: 400;  
 }
 
 .copyright-text {
