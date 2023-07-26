@@ -130,6 +130,7 @@ header {
   font-style: italic;
   font-size: 45px;
   width: 20px;  
+  align-items: center !important;
 
 }
 
