@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../normalize.css">
+    <link rel="stylesheet" href="style.css">
+   
+    <!-- font Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    
+    <title>Registrati - TicketStage</title>
+</head>
+<body>
+    <form id="formBiglietto" class="sfondoshop">
+        <header class="header">Acquista Biglietti</header>
+        <div class="inputs">
+            <select id="teatro" class="input" type="text">
+            <label class="input-label"></label>
+            <option value="" disabled selected>Seleziona un teatro</option>
+            <option value="teatro1">Teatro 1</option>
+            <option value="teatro2">Teatro 2</option>
+            <option value="teatro3">Teatro 3</option>
+            </select>
+        </div>
+        <div class="inputs">
+            <select id="spettacolo" class="input" type="text">
+            <label class="input-label"></label>
+            <option value="" disabled selected>Seleziona uno spettacolo</option>
+            <option value="spettacolo1">Spettacolo 1</option>
+            <option value="spettacolo2">Spettacolo 2</option>
+            </select>
+        </div>
+        <div class="inputs">
+            <select id="replica" class="input" type="text">
+            <label class="input-label"></label>
+            <option value="" disabled selected>Seleziona una replica</option>
+            <option value="replica1">Replica 1</option>
+            <option value="replica2">Replica 2</option>
+            <option value="replica3">Replica 3</option>
+            <option value="replica4">Replica 4</option>
+            <option value="replica5">Replica 5</option>
+            </select>
+        </div>
+        <div class="inputs">
+        <select id="pagamento" class="input" >
+        <label class="input-label"></label>
+            <option value="null"> - Inserisci metodo di pagamento - </option>
+            <option value="Contanti">Contanti</option>
+            <option value="Carta di credito" >Carta di credito</option>
+        </select>
+    </div>
+    
+
+           <button class="" type="button" id="riduciB"> - </button>
+           <input type="text" id="numBiglietti" value="0" disabled="true">
+           <button type="button" id="aumentaB"> + </button>
+           <input type="submit" id="CompraBiglietto" class="signin-btn" value="compra biglietto" >
+
+    </form>
+
+
+    <script src="script/script.js"></script>
+</body>
+</html>
