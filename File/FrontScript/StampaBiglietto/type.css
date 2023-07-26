@@ -1,134 +1,149 @@
 body {
-    background-color: Thistle;
-    font-family: "Yanone Kaffeesatz", sans-serif;
-    font-weight: 600;
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .ticket {
-    width: 20%;
-    height: 80%;
-    background-color: white;
-    margin: 25px auto;
-    position: relative;
-  }
-
-  
-  .holes-top {
-    height: 50px;
-    width: 50px;
-    background-color: Thistle;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    margin-left: -25px;
-    top: -25px;
-  }
-  .holes-top:before, .holes-top:after {
-    content: "";
-    height: 50px;
-    width: 50px;
-    background-color: Thistle;
-    position: absolute;
-    border-radius: 50%;
-  }
-  .holes-top:before {
-    left: -200px;
-  }
-  .holes-top:after {
-    left: 200px;
-  }
-  
-  .holes-lower {
-    position: relative;
-    margin: 25px;
-    border: 1px dashed #aaa;
-  }
-  .holes-lower:before, .holes-lower:after {
-    content: "";
-    height: 50px;
-    width: 50px;
-    background-color: Thistle;
-    position: absolute;
-    border-radius: 50%;
-  }
-  .holes-lower:before {
-    top: -25px;
-    left: -50px;
-  }
-  .holes-lower:after {
-    top: -25px;
-    left: 350px;
-  }
-  
-  .title {
-    padding: 50px 25px 10px;
-  }
-  
-  .cinema {
-    color: #aaa;
-    font-size: 22px;
-  }
-  
-  .movie-title {
-    font-size: 50px;
-  }
-  
-  .info {
-    padding: 15px 25px;
-  }
-  
-  table {
-    width: 100%;
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  table tr {
-    margin-bottom: 10px;
-  }
-  table th {
-    text-align: left;
-  }
-  table th:nth-of-type(1) {
-    width: 38%;
-  }
-  table th:nth-of-type(2) {
-    width: 40%;
-  }
-  table th:nth-of-type(3) {
-    width: 15%;
-  }
-  table td {
-    width: 33%;
-    font-size: 32px;
-  }
-  
-  .bigger {
-    font-size: 48px;
-  }
-  
-  .serial {
-    padding: 25px;
-  }
-  .serial table {
-    border-collapse: collapse;
-    margin: 0 auto;
-  }
-  .serial td {
-    width: 3px;
-    height: 50px;
-  }
-  
-  .numbers td {
-    font-size: 16px;
-    text-align: center;
-  }
-
-  .titolare {
-    text-align: center;
-    padding-bottom: 10px;
-  }
+   background: #dd3f3e;
+   font-family: 'Montserrat', sans-serif;
+   margin: 0;
+   padding: 0;
+ }
+ 
+ .ticket {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 700px;
+   margin: 20px auto;
+   
+   .stub, .check {
+     box-sizing: border-box;
+   }
+ }
+ 
+ .stub {
+   background: #ef5658;
+   height: 250px;
+   width: 250px;
+   color: white;
+   padding: 20px;
+   position: relative;
+   
+   &:before {
+     content: '';
+     position: absolute;
+     top: 0; right: 0;
+     border-top: 20px solid #dd3f3e;
+     border-left: 20px solid #ef5658;
+     width: 0;
+   }
+   &:after {
+     content: '';
+     position: absolute;
+     bottom: 0; right: 0;
+     border-bottom: 20px solid #dd3f3e;
+     border-left: 20px solid #ef5658;
+     width: 0;
+   }
+   
+   .top {
+     display: flex;
+     align-items: center;
+     height: 40px;
+     text-transform: uppercase;
+     
+     .line {
+       display: block;
+       background: #fff;
+       height: 40px;
+       width: 3px;
+       margin: 0 20px;
+     }
+     .num {
+       font-size: 10px;
+       span {
+         color: #000;
+       }
+     }
+   }
+   .number {
+     position: absolute;
+     left: 40px;
+     font-size: 150px;
+   }
+   .invite {
+     position: absolute;
+     left: 150px;
+     bottom: 45px;
+     color: #000;
+     width: 20%;
+     
+     &:before {
+       content: '';
+       background: #fff;
+       display: block;
+       width: 40px;
+       height: 3px;
+       margin-bottom: 5px;     
+     }
+   }
+ }
+ 
+ .check {
+   background: #fff;
+   height: 250px;
+   width: 450px;
+   padding: 40px;
+   position: relative;
+   
+   &:before {
+     content: '';
+     position: absolute;
+     top: 0; left: 0;
+     border-top: 20px solid #dd3f3e;
+     border-right: 20px solid #fff;
+     width: 0;
+   }
+   &:after {
+     content: '';
+     position: absolute;
+     bottom: 0; left: 0;
+     border-bottom: 20px solid #dd3f3e;
+     border-right: 20px solid #fff;
+     width: 0;
+   }
+   
+   .big {
+     font-size: 80px;
+     font-weight: 900;
+     line-height: .8em;
+   }
+   .number {
+     position: absolute;
+     top: 50px;
+     right: 50px;
+     color: #ef5658;
+     font-size: 40px;
+   }
+   .info {
+     display: flex;
+     justify-content: flex-start;
+     
+     font-size: 12px;
+     margin-top: 20px;
+     width: 100%;
+     
+     section {
+       margin-right: 50px;
+       &:before {
+         content: '';
+         background: #ef5658;
+         display: block;
+         width: 40px;
+         height: 3px;
+         margin-bottom: 5px;
+       }
+       .title {
+         font-size: 10px;
+         text-transform: uppercase;
+       }
+     }
+   }
+ }
+ 
