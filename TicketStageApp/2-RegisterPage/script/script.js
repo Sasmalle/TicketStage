@@ -74,10 +74,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    messaggio= "Il tuo codice cliente è: "
+    let messaggio= "Il tuo codice cliente è: "
     localStorage.setItem("cliente", i++)
     alert(mesaggio + localStorage.getItem("cliente"))
     window.location.href = '../1-LoginPage/loginPage.html';
+
+
 
   });
 
