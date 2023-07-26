@@ -1,5 +1,8 @@
 package com.ticketstage.entities;
 
+import jakarta.persistence.Entity;
+
+
 public class BigliettiReso {
 	
 	private String cognome;
