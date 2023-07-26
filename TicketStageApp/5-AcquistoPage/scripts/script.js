@@ -96,9 +96,10 @@ compra.addEventListener("click", function () {
       updatePostiDisponibiliInStorage()
       alert(`posti esauiriti`)
     }
-    window.location.href = '../4-BigliettoPage/bigliettoPage.html';
+
 
   }
+  window.location.href = '../4-BigliettoPage/bigliettoPage.html';
 
 });
 
