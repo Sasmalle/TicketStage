@@ -29,7 +29,7 @@ body {
 
 body { 
   background-size: cover;
-  background-image: url("img/SfondoLogin.jpg");
+  background-image: url("/TicketStageApp/img/SfondoLogin.jpg");
   background-position: center;
   background-attachment: fixed;
 }
@@ -190,15 +190,15 @@ header {
 }
 
 .card:nth-child(1):before {
-  background-image: url("img/TeatroCarignano.jpg");
+  background-image: url("/TicketStageApp/img/TeatroCarignano.jpg");
 }
 
 .card:nth-child(2):before {
-  background-image: url("img/TeatroRegio.jpg");
+  background-image: url("/TicketStageApp/img/TeatroRegio.jpg");
 }
 
 .card:nth-child(3):before {
-  background-image: url("img/TeatroAlfieri.jpg");
+  background-image: url("/TicketStageApp/img/TeatroAlfieri.jpg");
 }
 
 

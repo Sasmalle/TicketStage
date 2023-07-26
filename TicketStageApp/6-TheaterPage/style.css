@@ -22,7 +22,7 @@ body {
 body {
  
   background-size: cover;
-  background-image: url("img/SfondoLogin.jpg");
+  background-image: url("/TicketStageApp/img/SfondoLogin.jpg");
   background-position: center;
   background-attachment: fixed;
 }
@@ -79,7 +79,7 @@ body {
 }
 
 header {  
-  background-image: url("img/TeatroCarignano.jpg");
+  background-image: url("/TicketStageApp/img/TeatroCarignano.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
