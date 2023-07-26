@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TicketStage</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <!--Impostazioni della navbar-->
+  
+   
+   
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" alt="logo" width="60" ></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-2">
+              
+        </li>
+        <li class="nav-item">
+          <a  class="nav-link active" href="#cardss">Teatri</a>
+        </li>   
+          <!--<li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Spettacoli
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Appunti per un film
+                sulla lotta di classe</a></li>
+              <li><a class="dropdown-item" href="#">Il birraio di Preston</a></li>
+              <li><a class="dropdown-item" href="#">La Traviata</a></li>
+              <li><a class="dropdown-item" href="#">La Bohème</a></li>
+              <li><a class="dropdown-item" href="#">Poveri, ma belli</a></li>
+              <li><a class="dropdown-item" href="#">Il sogno del piccolo
+                imperatore</a></li>
+            </ul> -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#contattaci">Chi siamo</a>
+            </li>           
+        </ul>       
+      </div>
+    </div>
+    </nav>
+
+    
+
+
+
+
+         <!--Impostazioni del carrosello-->
+
+
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item">
+        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="img/spet1.jpg" alt="immagine1" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title></title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em"></text></img>
+      </div>
+      <div class="carousel-item active">
+        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="img/spet2.jpg" alt="immagine2" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title></title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em"></text></img>
+      </div>
+      <div class="carousel-item">
+        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="img/spet3.jpg" alt="immagine3" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text></img>
+      </div>
+      <div class="carousel-item">
+        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="img/spet4.webp" alt="immagine4" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title></title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text></img>
+      </div>
+      <div class="carousel-item">
+        <img class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" src="img/spet5.jpg" alt="immagine5" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title></title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em"></text></img>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>     
+    <br>
+   
+  </div>
+
+
+
+     <!--Impostazioni della header-->
+
+
+  <header class="testata">
+    <div>
+      <h1 class="titolone">Entra nel vivo del teatro</h1>         
+      <h2 class="subtitolo">Scopri le nostre location</h2>
+    </div>
+  </header>
+
+  <!--Impostazioni delle cards-->
+
+
+  <main class="page-content">
+    <div class="card" id="cardss">
+      <div class="content">
+        <h2 class="title">Teatro Carignano</h2>
+        <p class="copy">Esplora gli spettacoli in questa sede</p>
+        <button class="btn">Acquista biglietti</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Teatro Regio</h2>
+        <p class="copy">Esplora gli spettacoli in questa sede</p>
+        <button class="btn">Acquista biglietti</button>
+      </div>
+    </div>
+    <div class="card">
+      <div class="content">
+        <h2 class="title">Teatro Alfieri</h2>
+        <p class="copy">Esplora gli spettacoli in questa sede</p>
+        <button class="btn">Acquista biglietti</button>
+      </div>
+    </div>
+
+    </div>
+    </div>
+  </main>
+ 
+
+
+<!-- Impostazioni footer -->
+<div class="footer"></div>   
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-8">
+        <h6>Su di noi</h6>
+        <p class="text-justify">Amanti del teatro sponsorizziamo i migliori spettacoli per tutta la città di Torino per divulgare l'arte e la cultura, così che tutti possano assistere alle opere del passato che hanno segnato la storia. La nostra passione per il teatro si riflette nel servizio che offriamo ai nostri clienti, in modo da poterti concentrare solo sulla magia dello spettacolo che stai per vivere. </p>
+      </div>
+
+     <!-- <div class="col-xs-6 col-md-3">   altra colonna aggiuntiva nel footer che ho lasciato in caso di bisogno
+        <h6>Categories</h6>
+        <ul class="footer-links">
+          <li><a href="http://scanfcode.com/category/c-language/">C</a></li>
+          <li><a href="http://scanfcode.com/category/front-end-development/">UI Design</a></li>
+          <li><a href="http://scanfcode.com/category/back-end-development/">PHP</a></li>
+          <li><a href="http://scanfcode.com/category/java-programming-language/">Java</a></li>
+          <li><a href="http://scanfcode.com/category/android/">Android</a></li>
+          <li><a href="http://scanfcode.com/category/templates/">Templates</a></li>
+        </ul>
+      </div> -->
+      
+
+      <div class="col-xs-6 col-md-3">
+        <h6 id="contattaci">Contattaci</h6>
+        <ul class="footer-links">
+          <li>telefono: 351836750</li>
+          <li><a href="mailto:alessandro.piccolo30@gmail.com">mail: TicketStage@virgilio.com</a></li>
+          <li><a href="https://www.governo.it/it/privacy-policy">Privacy Policy</a></li>         
+        </ul>
+      </div>
+    </div>
+    <hr>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">
+        <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by
+          Alteam.
+        </p>
+      </div>
+
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <ul class="social-icons">
+          <li><a class="facebook" href="https://www.youtube.com/watch?v=rqZODQjaIx8"><i class="fa fa-facebook"></i></a></li>
+          <li><a class="twitter" id="esteregg" href="#"><i class="fa fa-twitter"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+    <!--immagini degli sponsor-->
+
+  <img class="icone" alt="partner" textalign="" src="https://www.teatrostabiletorino.it/wp-content/uploads/2019/02/piede_loghiTST.jpg">
+</footer>
+
+
+ <script 
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+      
+   </script>
+
+      <!--Impostazioni del tempo di cambio foto nel carrosello-->
+
+<script>
+   const myCarouselElement = document.querySelector('#carouselExampleFade')
+
+   const carousel = new bootstrap.Carousel(myCarouselElement, {
+   interval: 5000,
+   touch: false
+   });
+</script>
+
+ 
+
+</body>
+
+
+
+
+</html>
