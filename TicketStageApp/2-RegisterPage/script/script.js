@@ -9,10 +9,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const erroreEmail = document.getElementById("erroreEmail");
   const erroreTelefono = document.getElementById("erroreTelefono");
 
-    // let i = 4;
-    // if()
-    // localStorage.setItem("cliente", i)
-
+  let i = localStorage.getItem("cliente");
+  if (!i) {
+    i = 14;
+    localStorage.setItem("cliente", i);
+  }
   signupBtn.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -74,9 +75,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     
-      // let mes = "Il tuo codice cliente è: "
-      // alert(mes + i);
-    
+    localStorage.setItem("cliente", i++)
+    alert(localStorage.getItem("cliente"))
 
 
   });
