@@ -1,3 +1,38 @@
+/** stile per la navbar **/
+
+.container-fluid {
+  background-color: rgb(255, 255, 255);
+  padding-top: 10px;
+  padding-bottom: 10px;  
+  margin-bottom: -10px;
+  margin-top: -10px;
+
+}
+
+.nav-link {
+  text-decoration: none;
+  background-color: transparent;
+  /* Sfondo trasparente di default */
+  border-radius: 10px;
+  margin-right: 10px;
+  transition: all 0.5s;
+  font-family: 'Old Standard TT';  
+  margin-top: 20px;
+  padding: 10px;
+  
+
+}
+
+/* Stile quando il cursore è sopra il link */
+.nav-link:hover {
+  background-color: rgba(209, 59, 32, 0.938);
+  /* Cambia il colore dello sfondo quando il cursore è sopra il link */
+  color: #fff !important;
+
+}
+
+
+
 body {
     background: #dd3f3e;
     font-family: 'Montserrat', sans-serif;
