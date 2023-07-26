@@ -249,7 +249,7 @@ header {
 }
 
 .btn:hover {
-  background-color: #0d0d0d;
+  background-color: rgba(209, 59, 32, 0.938);
 }
 
 .btn:focus {
