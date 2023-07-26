@@ -219,6 +219,21 @@ header {
 }
 
 
+.signin-btn {
+  background-color: #000000; /* Rosso teatro */
+  color: #fff;
+  border: none; 
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+
+  
+}
+
+.signin-btn:hover {
+  background-color: #a30000; /* Rosso teatro più scuro */
+}
 
 
 .title {
