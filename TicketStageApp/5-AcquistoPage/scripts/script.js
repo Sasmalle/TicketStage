@@ -88,18 +88,20 @@ compra.addEventListener("click", function () {
         method: "POST",
         headers: { "content-type": "application/json", },
         body: JSON.stringify(nuovoBiglietto)
+        
       })
-        .then(data => { return data.json() })
+        .then(data =>  window.location.href = '../4-BigliettoPage/bigliettoPage.html')
 
     } else {
       postiDisponibili[ottieniPosizioneArray(CodReplica)] = postiDisponibiliReplica;
       updatePostiDisponibiliInStorage()
       alert(`posti esauiriti`)
+      
     }
-    window.location.href = '../4-BigliettoPage/bigliettoPage.html';
+    
 
   }
-
+  
 });
 
 function convertiInEuropeo(date) {
