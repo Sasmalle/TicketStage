@@ -22,7 +22,7 @@ fetch("http://localhost:9005/api/teatro")
       <div class="content">
         <h2 class="title">${teatri.nome}</h2>
         <p class="copy">Esplora gli spettacoli in questa sede</p>
-        <button class="btn" id="${teatri.cod_teatro}" onclick="passaCod(${teatri.cod_teatro})">Acquista biglietti</button>
+        <a href="../6-TheaterPage/TheaterPage.html"><button class="btn" id="${teatri.cod_teatro}" onclick="passaCod(${teatri.cod_teatro})">Acquista biglietti</button></a>
       </div>
     </div>
     
