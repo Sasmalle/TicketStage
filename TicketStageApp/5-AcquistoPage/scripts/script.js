@@ -97,11 +97,11 @@ compra.addEventListener("click", function () {
       updatePostiDisponibiliInStorage()
       alert(`posti esauiriti`)
       
-    }
-    
+    } 
 
   }
   
+
 });
 
 function convertiInEuropeo(date) {
