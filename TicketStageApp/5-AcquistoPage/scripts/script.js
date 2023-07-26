@@ -94,8 +94,9 @@ compra.addEventListener("click", function () {
     } else {
       postiDisponibili[ottieniPosizioneArray(CodReplica)] = postiDisponibiliReplica;
       updatePostiDisponibiliInStorage()
-      formBiglietto.innerHTML = `<p> posti esauiriti</p>`
+      alert(`posti esauiriti`)
     }
+    window.location.href = '../4-BigliettoPage/bigliettoPage.html';
 
   }
 
