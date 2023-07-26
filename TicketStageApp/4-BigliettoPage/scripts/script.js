@@ -1,6 +1,7 @@
 let carte = document.querySelector("#carte");
-
-fetch(`http://localhost:9005/api/biglietti/bigliettoreso/2`)
+const utete = localStorage.getItem("utente");
+const codUtente = JSON.parse(utete);
+fetch(`http://localhost:9005/api/biglietti/bigliettoreso/${codUtente.cod_cliente}`)
     .then(data => {
       return data.json();
     })

@@ -1,5 +1,5 @@
-let teatroSel = document.querySelector("#teatro");
-let spettacoloSel = document.querySelector("#spettacolo");
+// let teatroSel = document.querySelector("#teatro");
+// let spettacoloSel = document.querySelector("#spettacolo");
 let replicaSel = document.querySelector("#replica");
 let numBiglietti = document.querySelector("#numBiglietti");
 let riduciBiglietti = document.querySelector("#riduciB");
@@ -8,8 +8,8 @@ let pagamento = document.querySelector("#pagamento");
 let compra = document.querySelector("#CompraBiglietto");
 let formBiglietto = document.querySelector("#formBiglietto")
 
-teatroSel.innerHTML = `<option value="null" >-Seleziona un teatro-</option>`
-spettacoloSel.innerHTML = `<option value="null" > - </option>`
+// teatroSel.innerHTML = `<option value="null" >-Seleziona un teatro-</option>`
+// spettacoloSel.innerHTML = `<option value="null" > - </option>`
 replicaSel.innerHTML = `<option value="null" > - </option>`
 
 let CodReplica;

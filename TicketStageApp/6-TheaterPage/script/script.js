@@ -11,19 +11,20 @@ fetch(`http://localhost:9005/api/spettacoli/${localStorage.getItem("cod_teatro")
     spettacolo.forEach(spettacoli => {
       carte.innerHTML +=
        `
-    <div class="container">
-    <div class="show-item">
-    <div class="show-image">
-       <img src="img/${spettacoli.titolo}.jpg" alt="Spettacolo 1">
-    </div>
-    <div class="show-details">
-       <h2>Titolo ${spettacoli.titolo}</h2>
-       <p>Autore: ${spettacoli.autore}</p>
-       <p>Regista: ${spettacoli.regista}</p>
-       <p>prezzo: ${spettacoli.prezzo}</p>
-       <button class="btn-buy" id="${spettacoli.nome}" onclick="passaCod('${spettacoli.cod_spettacolo}')">Acquista biglietto</button>
-    </div>
-    </div>  
+
+       <div class="container">
+       <div class="show-item">        
+           <div class="show-details">
+           <h2 class="titolo">${spettacoli.titolo}</h2>
+           <p class="p2">Autore:  ${spettacoli.autore}</p>
+           <p class="p2">Spettacolo: ${spettacoli.titolo}</p>
+           <p class="p2">Regista:  ${spettacoli.regista}</p>
+           <p class="p2">Prezzo: ${spettacoli.prezzo}</p>        
+           <button class="btn-buy" id="${spettacoli.nome}" onclick="passaCod('${spettacoli.cod_spettacolo}')">Acquista biglietto</button>
+         </div>
+       </div>
+
+ 
  `
     });
 
