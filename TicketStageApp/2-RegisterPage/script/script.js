@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let i = localStorage.getItem("cliente");
   if (!i) {
-    i = 14;
+    i = 15;
     localStorage.setItem("cliente", i);
   }
   signupBtn.addEventListener("click", function (event) {
@@ -74,9 +74,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
-    
+    messaggio= "Il tuo codice cliente è: "
     localStorage.setItem("cliente", i++)
-    alert(localStorage.getItem("cliente"))
+    alert(mesaggio + localStorage.getItem("cliente"))
 
 
   });
