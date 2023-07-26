@@ -69,6 +69,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    fetch('http://localhost:9005/api/cliente'),{
+        method
+    }
+
   });
 
   // Funzione per mostrare un messaggio di errore sotto l'input
@@ -94,4 +98,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const phoneNumberPattern = /^\d+$/;
     return phoneNumberPattern.test(telefono);
   }
+
+
 });
