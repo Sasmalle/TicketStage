@@ -31,6 +31,12 @@ public class ClienteServiceIMPL implements ClienteService {
 		return dao.save(cliente);
 	}
 
+	@Override
+	public List<Cliente> findClienteEmail(String email) {
+		// TODO Auto-generated method stub
+		return dao.getClienteByEmail(email);
+	}
+
 //	@Override
 //	public Cliente setNome(String nome) {
 //		// TODO Auto-generated method stub

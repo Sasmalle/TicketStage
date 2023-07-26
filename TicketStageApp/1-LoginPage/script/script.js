@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.removeItem("utente");
     const signinBtn = document.querySelector("#signinBtn");
     const codiceUtenteInput = document.querySelector("#codiceUtente");
-    const rememberCheckbox = document.querySelector("#rememberCheckbox");
     const erroreTesto = document.querySelector("#erroreTesto");
 
     codiceUtenteInput.addEventListener("input", function () {
