@@ -20,7 +20,7 @@ fetch(`http://localhost:9005/api/spettacoli/${localStorage.getItem("cod_teatro")
            <p class="p2">Spettacolo: ${spettacoli.titolo}</p>
            <p class="p2">Regista:  ${spettacoli.regista}</p>
            <p class="p2">Prezzo: ${spettacoli.prezzo}</p>        
-           <button class="btn-buy" id="${spettacoli.nome}" onclick="passaCod('${spettacoli.cod_spettacolo}')">Acquista biglietto</button>
+           <a href="../5-AcquistoPage/acquistoPage.html"><button class="btn-buy" id="${spettacoli.nome}" onclick="passaCod('${spettacoli.cod_spettacolo}')">Acquista biglietto</button></a>
          </div>
        </div>
 
