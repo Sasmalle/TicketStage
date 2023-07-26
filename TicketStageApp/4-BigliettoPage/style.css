@@ -4,6 +4,10 @@ body {
     margin: 0;
     padding: 0;
   }
+  #carte{
+    display: flex;
+    flex-direction: column;
+  }
   
   .ticket {
     display: flex;
@@ -33,6 +37,7 @@ body {
       border-left: 20px solid #ef5658;
       width: 0;
     }
+    
     &:after {
       content: '';
       position: absolute;
@@ -65,7 +70,7 @@ body {
     .number {
       position: absolute;
       left: 40px;
-      font-size: 150px;
+      font-size: 5rem;
     }
     .invite {
       position: absolute;
@@ -110,17 +115,11 @@ body {
     }
     
     .big {
-      font-size: 80px;
+      font-size: 230%;
       font-weight: 900;
       line-height: .8em;
     }
-    .number {
-      position: absolute;
-      top: 50px;
-      right: 50px;
-      color: #ef5658;
-      font-size: 40px;
-    }
+   
     .info {
       display: flex;
       justify-content: flex-start;
